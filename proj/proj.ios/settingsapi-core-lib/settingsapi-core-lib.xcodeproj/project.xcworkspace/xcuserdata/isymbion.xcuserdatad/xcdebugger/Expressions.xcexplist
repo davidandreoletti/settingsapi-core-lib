@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "settingsapi::test::SettingsAPITestSuite::readConfigurationFile::test_method():SettingsAPITest.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "myNode0-&gt;getKey()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		C707D9CB15E99A5A00CD889E /* check-source-code-against-google-c++-style-guide */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C707D9CC15E99A5A00CD889E /* Build configuration list for PBXAggregateTarget "check-source-code-against-google-c++-style-guide" */;
+			buildPhases = (
+				C707D9CF15E99A5F00CD889E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "check-source-code-against-google-c++-style-guide";
+			productName = "Check source code against Google C++ Style Guide";
+		};
+		C707D9D015E99ACB00CD889E /* build-docset */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C707D9D115E99ACB00CD889E /* Build configuration list for PBXAggregateTarget "build-docset" */;
+			buildPhases = (
+				C707D9D415E99AD100CD889E /* Build Documentation */,
+			);
+			dependencies = (
+			);
+			name = "build-docset";
+			productName = "build-docset";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		C707D9AA15E912BE00CD889E /* SettingsReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A715E912BE00CD889E /* SettingsReader.cpp */; };
+		C707D9AB15E912BE00CD889E /* SettingNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A815E912BE00CD889E /* SettingNode.cpp */; };
+		C707D9AC15E912BE00CD889E /* SettingsAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A915E912BE00CD889E /* SettingsAPI.cpp */; };
+		C707D9B515E912D300CD889E /* SettingsAPITest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9B315E912D300CD889E /* SettingsAPITest.cpp */; };
+		C707D9B615E912D300CD889E /* TestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9B415E912D300CD889E /* TestRunner.cpp */; };
+		C707D9E615E9A70600CD889E /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C707D9E415E9A4CC00CD889E /* boost.framework */; };
+		C707D9E915E9A88D00CD889E /* settingsapiTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = C707D9E815E9A88D00CD889E /* settingsapiTests.mm */; };
+		C70CEDB015E7BF5100017A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAF15E7BF5100017A65 /* Foundation.framework */; };
+		C70CEDBF15E7BF5100017A65 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDBE15E7BF5100017A65 /* SenTestingKit.framework */; };
+		C70CEDC215E7BF5100017A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAF15E7BF5100017A65 /* Foundation.framework */; };
+		C70CEDC515E7BF5100017A65 /* libsettingsapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
+		C70CEDCB15E7BF5100017A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70CEDC915E7BF5100017A65 /* InfoPlist.strings */; };
+		C720B2A915EA59B8000CD689 /* libjson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C720B2A815EA59B8000CD689 /* libjson.framework */; };
+		C720B2AA15EA59B8000CD689 /* libjson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C720B2A815EA59B8000CD689 /* libjson.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C70CEDC315E7BF5100017A65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C70CEDA315E7BF5100017A65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C70CEDAB15E7BF5100017A65;
+			remoteInfo = "settingsapi-core-lib";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C70CEDAA15E7BF5100017A65 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C707D9A715E912BE00CD889E /* SettingsReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsReader.cpp; sourceTree = "<group>"; };
+		C707D9A815E912BE00CD889E /* SettingNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNode.cpp; sourceTree = "<group>"; };
+		C707D9A915E912BE00CD889E /* SettingsAPI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsAPI.cpp; sourceTree = "<group>"; };
+		C707D9AF15E912D300CD889E /* SettingsAPITest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsAPITest.h; sourceTree = "<group>"; };
+		C707D9B015E912D300CD889E /* TestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRunner.h; sourceTree = "<group>"; };
+		C707D9B315E912D300CD889E /* SettingsAPITest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsAPITest.cpp; sourceTree = "<group>"; };
+		C707D9B415E912D300CD889E /* TestRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRunner.cpp; sourceTree = "<group>"; };
+		C707D9D815E99D7700CD889E /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		C707D9DE15E99D7700CD889E /* SettingsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsReader.h; sourceTree = "<group>"; };
+		C707D9DF15E99D7700CD889E /* SettingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNode.h; sourceTree = "<group>"; };
+		C707D9E015E99D7700CD889E /* SettingNodeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNodeInterface.h; sourceTree = "<group>"; };
+		C707D9E115E99D7700CD889E /* SettingsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsAPI.h; sourceTree = "<group>"; };
+		C707D9E215E99D7700CD889E /* SettingsReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsReaderInterface.h; sourceTree = "<group>"; };
+		C707D9E315E99D7700CD889E /* SettingsWriterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWriterInterface.h; sourceTree = "<group>"; };
+		C707D9E415E9A4CC00CD889E /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = "/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost/boost.framework"; sourceTree = "<absolute>"; };
+		C707D9E715E9A88D00CD889E /* settingsapiTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsapiTests.h; sourceTree = "<group>"; };
+		C707D9E815E9A88D00CD889E /* settingsapiTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = settingsapiTests.mm; sourceTree = "<group>"; };
+		C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsettingsapi.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70CEDAF15E7BF5100017A65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C70CEDB315E7BF5100017A65 /* settingsapi-core-lib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "settingsapi-core-lib-Prefix.pch"; sourceTree = "<group>"; };
+		C70CEDBD15E7BF5100017A65 /* settingsapiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = settingsapiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70CEDBE15E7BF5100017A65 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C70CEDC815E7BF5100017A65 /* settingsapi-core-libTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "settingsapi-core-libTests-Info.plist"; sourceTree = "<group>"; };
+		C70CEDCA15E7BF5100017A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C720B2A815EA59B8000CD689 /* libjson.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libjson.framework; path = "../../../../sourceforge-libjson.git/framework/libjson.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C70CEDA915E7BF5100017A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70CEDB015E7BF5100017A65 /* Foundation.framework in Frameworks */,
+				C720B2A915EA59B8000CD689 /* libjson.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C70CEDB915E7BF5100017A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70CEDBF15E7BF5100017A65 /* SenTestingKit.framework in Frameworks */,
+				C70CEDC215E7BF5100017A65 /* Foundation.framework in Frameworks */,
+				C707D9E615E9A70600CD889E /* boost.framework in Frameworks */,
+				C70CEDC515E7BF5100017A65 /* libsettingsapi.a in Frameworks */,
+				C720B2AA15EA59B8000CD689 /* libjson.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C707D9A215E912BE00CD889E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9A315E912BE00CD889E /* settingsapi */,
+			);
+			name = src;
+			path = ../../../src;
+			sourceTree = "<group>";
+		};
+		C707D9A315E912BE00CD889E /* settingsapi */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9A415E912BE00CD889E /* impl */,
+				C707D9A815E912BE00CD889E /* SettingNode.cpp */,
+				C707D9A915E912BE00CD889E /* SettingsAPI.cpp */,
+			);
+			path = settingsapi;
+			sourceTree = "<group>";
+		};
+		C707D9A415E912BE00CD889E /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9A515E912BE00CD889E /* json */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		C707D9A515E912BE00CD889E /* json */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9A615E912BE00CD889E /* libjson0 */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		C707D9A615E912BE00CD889E /* libjson0 */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9A715E912BE00CD889E /* SettingsReader.cpp */,
+			);
+			path = libjson0;
+			sourceTree = "<group>";
+		};
+		C707D9AD15E912D300CD889E /* test */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9AE15E912D300CD889E /* include */,
+				C707D9B115E912D300CD889E /* src */,
+			);
+			name = test;
+			path = ../../../test;
+			sourceTree = "<group>";
+		};
+		C707D9AE15E912D300CD889E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9AF15E912D300CD889E /* SettingsAPITest.h */,
+				C707D9B015E912D300CD889E /* TestRunner.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C707D9B115E912D300CD889E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9B215E912D300CD889E /* settingsapi */,
+				C707D9B415E912D300CD889E /* TestRunner.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C707D9B215E912D300CD889E /* settingsapi */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9B315E912D300CD889E /* SettingsAPITest.cpp */,
+			);
+			path = settingsapi;
+			sourceTree = "<group>";
+		};
+		C707D9D715E99D7700CD889E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9D815E99D7700CD889E /* README */,
+				C707D9D915E99D7700CD889E /* settingsapi */,
+			);
+			name = include;
+			path = ../../../include;
+			sourceTree = "<group>";
+		};
+		C707D9D915E99D7700CD889E /* settingsapi */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9DA15E99D7700CD889E /* impl */,
+				C707D9DF15E99D7700CD889E /* SettingNode.h */,
+				C707D9E015E99D7700CD889E /* SettingNodeInterface.h */,
+				C707D9E115E99D7700CD889E /* SettingsAPI.h */,
+				C707D9E215E99D7700CD889E /* SettingsReaderInterface.h */,
+				C707D9E315E99D7700CD889E /* SettingsWriterInterface.h */,
+			);
+			path = settingsapi;
+			sourceTree = "<group>";
+		};
+		C707D9DA15E99D7700CD889E /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9DB15E99D7700CD889E /* json */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		C707D9DB15E99D7700CD889E /* json */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9DC15E99D7700CD889E /* libjson0 */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		C707D9DC15E99D7700CD889E /* libjson0 */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9DE15E99D7700CD889E /* SettingsReader.h */,
+			);
+			path = libjson0;
+			sourceTree = "<group>";
+		};
+		C70CEDA115E7BF5100017A65 = {
+			isa = PBXGroup;
+			children = (
+				C707D9D715E99D7700CD889E /* include */,
+				C707D9AD15E912D300CD889E /* test */,
+				C707D9A215E912BE00CD889E /* src */,
+				C70CEDB115E7BF5100017A65 /* settingsapi */,
+				C70CEDC615E7BF5100017A65 /* settingsapiTests */,
+				C70CEDAE15E7BF5100017A65 /* Frameworks */,
+				C70CEDAD15E7BF5100017A65 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C70CEDAD15E7BF5100017A65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */,
+				C70CEDBD15E7BF5100017A65 /* settingsapiTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C70CEDAE15E7BF5100017A65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C720B2A815EA59B8000CD689 /* libjson.framework */,
+				C707D9E415E9A4CC00CD889E /* boost.framework */,
+				C70CEDAF15E7BF5100017A65 /* Foundation.framework */,
+				C70CEDBE15E7BF5100017A65 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C70CEDB115E7BF5100017A65 /* settingsapi */ = {
+			isa = PBXGroup;
+			children = (
+				C70CEDB215E7BF5100017A65 /* Supporting Files */,
+			);
+			name = settingsapi;
+			path = "settingsapi-core-lib";
+			sourceTree = "<group>";
+		};
+		C70CEDB215E7BF5100017A65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C70CEDB315E7BF5100017A65 /* settingsapi-core-lib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C70CEDC615E7BF5100017A65 /* settingsapiTests */ = {
+			isa = PBXGroup;
+			children = (
+				C707D9E715E9A88D00CD889E /* settingsapiTests.h */,
+				C707D9E815E9A88D00CD889E /* settingsapiTests.mm */,
+				C70CEDC715E7BF5100017A65 /* Supporting Files */,
+			);
+			name = settingsapiTests;
+			path = "settingsapi-core-libTests";
+			sourceTree = "<group>";
+		};
+		C70CEDC715E7BF5100017A65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C70CEDC815E7BF5100017A65 /* settingsapi-core-libTests-Info.plist */,
+				C70CEDC915E7BF5100017A65 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C70CEDAB15E7BF5100017A65 /* settingsapi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C70CEDD115E7BF5100017A65 /* Build configuration list for PBXNativeTarget "settingsapi" */;
+			buildPhases = (
+				C70CEDA815E7BF5100017A65 /* Sources */,
+				C70CEDA915E7BF5100017A65 /* Frameworks */,
+				C70CEDAA15E7BF5100017A65 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = settingsapi;
+			productName = "settingsapi-core-lib";
+			productReference = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C70CEDBC15E7BF5100017A65 /* settingsapiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C70CEDD415E7BF5100017A65 /* Build configuration list for PBXNativeTarget "settingsapiTests" */;
+			buildPhases = (
+				C70CEDB815E7BF5100017A65 /* Sources */,
+				C70CEDB915E7BF5100017A65 /* Frameworks */,
+				C70CEDBA15E7BF5100017A65 /* Resources */,
+				C70CEDBB15E7BF5100017A65 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C70CEDC415E7BF5100017A65 /* PBXTargetDependency */,
+			);
+			name = settingsapiTests;
+			productName = "settingsapi-core-libTests";
+			productReference = C70CEDBD15E7BF5100017A65 /* settingsapiTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C70CEDA315E7BF5100017A65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "IO Stark";
+			};
+			buildConfigurationList = C70CEDA615E7BF5100017A65 /* Build configuration list for PBXProject "settingsapi-core-lib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C70CEDA115E7BF5100017A65;
+			productRefGroup = C70CEDAD15E7BF5100017A65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C70CEDAB15E7BF5100017A65 /* settingsapi */,
+				C70CEDBC15E7BF5100017A65 /* settingsapiTests */,
+				C707D9CB15E99A5A00CD889E /* check-source-code-against-google-c++-style-guide */,
+				C707D9D015E99ACB00CD889E /* build-docset */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C70CEDBA15E7BF5100017A65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70CEDCB15E7BF5100017A65 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C707D9CF15E99A5F00CD889E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${PROJECT_DIR}/../../../scripts/google-cpp-style-guide\nchmod 700 ./check.sh\n./check.sh ${PROJECT_DIR}/../../../include\n./check.sh ${PROJECT_DIR}/../../../src\n./check.sh ${PROJECT_DIR}/../../../test";
+		};
+		C707D9D415E99AD100CD889E /* Build Documentation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Documentation";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${PROJECT_DIR}/../../../scripts/doc\nchmod 700 ./tool-docset.sh\n./tool-docset.sh -f \"${PROJECT_DIR}/../../../doc/developer.doxyfile\" -s \"${PROJECT_DIR}/../../../src \\\n${PROJECT_DIR}/../../../include\" -o \"${PROJECT_DIR}/../../../doc/developer\" -n \"API\" -r \"com.iostark\" -l \"true\"";
+		};
+		C70CEDBB15E7BF5100017A65 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C70CEDA815E7BF5100017A65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C707D9AA15E912BE00CD889E /* SettingsReader.cpp in Sources */,
+				C707D9AB15E912BE00CD889E /* SettingNode.cpp in Sources */,
+				C707D9AC15E912BE00CD889E /* SettingsAPI.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C70CEDB815E7BF5100017A65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C707D9B515E912D300CD889E /* SettingsAPITest.cpp in Sources */,
+				C707D9B615E912D300CD889E /* TestRunner.cpp in Sources */,
+				C707D9E915E9A88D00CD889E /* settingsapiTests.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C70CEDC415E7BF5100017A65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C70CEDAB15E7BF5100017A65 /* settingsapi */;
+			targetProxy = C70CEDC315E7BF5100017A65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C70CEDC915E7BF5100017A65 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C70CEDCA15E7BF5100017A65 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C707D9CD15E99A5A00CD889E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C707D9CE15E99A5A00CD889E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C707D9D215E99ACB00CD889E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C707D9D315E99ACB00CD889E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C70CEDCF15E7BF5100017A65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C70CEDD015E7BF5100017A65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C70CEDD215E7BF5100017A65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/settingsapi_core_lib.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost\"",
+					"\"$(SRCROOT)/../../../../sourceforge-libjson.git/framework\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "settingsapi-core-lib/settingsapi-core-lib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"NDEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../../../include/**",
+					"${SRCROOT}/../../../libs/ios/libjson/sourceforge-libjson.git/bin/include/libjson",
+					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C70CEDD315E7BF5100017A65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/settingsapi_core_lib.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost\"",
+					"\"$(SRCROOT)/../../../../sourceforge-libjson.git/framework\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "settingsapi-core-lib/settingsapi-core-lib-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../../../include/**",
+					"${SRCROOT}/../../../libs/ios/libjson/sourceforge-libjson.git/bin/include/libjson",
+					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C70CEDD515E7BF5100017A65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost\"",
+					"\"$(SRCROOT)/../../../../sourceforge-libjson.git/framework\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "settingsapi-core-lib/settingsapi-core-lib-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
+					"${SRCROOT}/../../../test/include",
+					"${SRCROOT}/../../../include/**",
+				);
+				INFOPLIST_FILE = "settingsapi-core-libTests/settingsapi-core-libTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C70CEDD615E7BF5100017A65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost\"",
+					"\"$(SRCROOT)/../../../../sourceforge-libjson.git/framework\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "settingsapi-core-lib/settingsapi-core-lib-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
+					"${SRCROOT}/../../../test/include",
+					"${SRCROOT}/../../../include/**",
+				);
+				INFOPLIST_FILE = "settingsapi-core-libTests/settingsapi-core-libTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C707D9CC15E99A5A00CD889E /* Build configuration list for PBXAggregateTarget "check-source-code-against-google-c++-style-guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C707D9CD15E99A5A00CD889E /* Debug */,
+				C707D9CE15E99A5A00CD889E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C707D9D115E99ACB00CD889E /* Build configuration list for PBXAggregateTarget "build-docset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C707D9D215E99ACB00CD889E /* Debug */,
+				C707D9D315E99ACB00CD889E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C70CEDA615E7BF5100017A65 /* Build configuration list for PBXProject "settingsapi-core-lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C70CEDCF15E7BF5100017A65 /* Debug */,
+				C70CEDD015E7BF5100017A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C70CEDD115E7BF5100017A65 /* Build configuration list for PBXNativeTarget "settingsapi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C70CEDD215E7BF5100017A65 /* Debug */,
+				C70CEDD315E7BF5100017A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C70CEDD415E7BF5100017A65 /* Build configuration list for PBXNativeTarget "settingsapiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C70CEDD515E7BF5100017A65 /* Debug */,
+				C70CEDD615E7BF5100017A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C70CEDA315E7BF5100017A65 /* Project object */;
+}
