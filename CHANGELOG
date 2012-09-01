@@ -1,0 +1,4 @@
+Release 1.0.0f0:
+
+PSETLCOR-4: Added SettingsAPI class (as public API).
+    - With support for iOS ONLY for now via libjson 7.6.1 (Successfully tested on SDK 5.1 but should work on SDK 4.3/SDK 5.0).
