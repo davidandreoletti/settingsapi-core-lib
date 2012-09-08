@@ -27,9 +27,9 @@ class SettingsReaderInterface {
     virtual ~SettingsReaderInterface() = 0;
     
     /**
-     * Parses a settings file content
-     * \param content File content to parse
-     * \return Root node of the full node tree. NULL if parsing failed
+     * Reads a settings file content
+     * \param content File content
+     * \return Root node of the full node tree hierarchy. NULL if parsing failed
      */
     virtual SettingNode* parse(std::string content) = 0;
 };
