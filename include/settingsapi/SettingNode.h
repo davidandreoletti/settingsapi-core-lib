@@ -33,7 +33,6 @@ class SettingNode :  SettingNodeInterface {
     virtual void setKey(std::string key);
     virtual std::string readString() const;
     virtual int readInt32(stringToInt32_Status &r);
-    virtual void lookupValue(std::string key, SettingNodeInterface* value);
     virtual void setValue(std::string value);
     virtual bool empty();
     virtual SettingNodeInterface* getParentNode();

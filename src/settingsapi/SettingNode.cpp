@@ -68,20 +68,6 @@ int SettingNode::readInt32(stringToInt32_Status &r) {
     r = SUCCESS;
     return l;
 }
-
-void SettingNode::lookupValue(std::string key, SettingNodeInterface* value) {
-    std::vector<SettingNodeInterface*>::iterator it = this->childrenNodes_.begin();
-    bool valueNodeFound = false;
-    while(it != this->childrenNodes_.end())
-    {
-        if (!valueNodeFound && ((*it)->getKey() == key))
-        {
-            value = *it;
-            valueNodeFound = true;
-        }
-        ++it;
-    }
-}
     
 void SettingNode::setValue(std::string value){
     if (this->getType() == SettingNodeType::VALUE)

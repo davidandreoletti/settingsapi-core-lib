@@ -75,13 +75,6 @@ class SettingNodeInterface {
     virtual int readInt32(stringToInt32_Status &r) = 0;
     
     /**
-     * Get the value associated to the key from this node
-     * \param key Key
-     * \param value Pointer to value. NULL if no node found
-     */
-    virtual void lookupValue(std::string key, SettingNodeInterface* value) = 0;
-    
-    /**
      * Set the value associated to the key:
      * - if type is \link SettingNodeType::VALUE \endlink, then this node value is set
      * - if type is NOT \link SettingNodeType::VALUE \endlink, then this node value is NOT set
