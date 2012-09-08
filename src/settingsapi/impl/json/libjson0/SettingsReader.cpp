@@ -1,5 +1,5 @@
 //
-//  SettingsReader
+//  SettingsReader.h
 //  libsettingsapi
 //
 //  Created by Andreoletti David on 7/24/12. 
@@ -16,7 +16,7 @@ namespace libjson0 {
     
 /**
  *  Identifies node type and returns its SettingNodeInterface::SettingNodeType equivalent
- *  \param A libjson's node instance
+ *  \param n A libjson's node instance
  *\ \return Equivalent in SettingNodeInterface
  */
 SettingNodeInterface::SettingNodeType identifyNodeType(JSONNODE* n)

@@ -20,12 +20,18 @@ namespace settingsapi {
  */
 class SettingNode :  SettingNodeInterface {
  public:
+    /**
+     * Default constructor
+     */
+    SettingNode();
+    
     // Inherited from SettingNodeInterface
-    virtual SettingNodeInterface::SettingNodeType getType();
+    virtual ~SettingNode();
+    virtual SettingNodeInterface::SettingNodeType getType() const;
     virtual void setType(SettingNodeInterface::SettingNodeType type);
-    virtual std::string getKey();
+    virtual std::string getKey() const;
     virtual void setKey(std::string key);
-    virtual std::string readString();
+    virtual std::string readString() const;
     virtual int readInt32(stringToInt32_Status &r);
     virtual void lookupValue(std::string key, SettingNodeInterface* value);
     virtual void setValue(std::string value);
@@ -33,7 +39,9 @@ class SettingNode :  SettingNodeInterface {
     virtual SettingNodeInterface* getParentNode();
     virtual void setParentNode(SettingNodeInterface* node);
     virtual void addChildNode(SettingNodeInterface* node);
-    virtual std::vector<SettingNodeInterface*> getChildren();
+    virtual std::vector<SettingNodeInterface*> getChildren() const;
+    virtual bool equalsTreeNode(const SettingNodeInterface& node) const;
+    virtual bool equalsNode(const SettingNodeInterface& node) const;
     
     /**
      * Gets internal node as returned by parser

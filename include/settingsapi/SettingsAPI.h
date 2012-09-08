@@ -21,17 +21,24 @@ class SettingNodeInterface;
 class SettingsAPI {
  public:
     /**
-     * Reads configuration file
-     * \param settingsFileContent File's content to extract settings from
-     * \return Parsed Settings file.
+     * Reads a configuration file's content
+     * \param settingsFileContent File's content
+     * \return Root SettingNodeInterface representing root of the entire tree node
      */
     SettingNodeInterface* readConfigurationFile(std::string configurationFileContent);
- private:
+
     /**
-     * Concrete implementation.
+     * Writes configuration file
+     * \param node Root node of the full tree node hierarchy
+     * \return String representation of the node tree hierarchy
      */
-//    class SettingsAPIImpl;
-//    SettingsAPIImpl* settingsAPIImpl;
+    std::string writeConfigurationFile(SettingNodeInterface* node);
+    
+    /**
+     * Creates an empty SettingNodeInterface instance
+     * \return A new node instance
+     */
+    SettingNodeInterface* createNode();
 };
 
 }  // namespaces

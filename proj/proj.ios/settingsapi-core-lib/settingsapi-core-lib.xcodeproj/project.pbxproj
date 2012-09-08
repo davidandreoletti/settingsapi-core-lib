@@ -46,6 +46,9 @@
 		C70CEDCB15E7BF5100017A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70CEDC915E7BF5100017A65 /* InfoPlist.strings */; };
 		C720B2A915EA59B8000CD689 /* libjson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C720B2A815EA59B8000CD689 /* libjson.framework */; };
 		C720B2AA15EA59B8000CD689 /* libjson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C720B2A815EA59B8000CD689 /* libjson.framework */; };
+		C7322DA415F6D4C600A4B066 /* SettingNodeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */; };
+		C7C1DB5815F1D90600C4D303 /* SettingsWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */; };
+		C7C1DB5E15F4327000C4D303 /* SettingNodeConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5D15F4327000C4D303 /* SettingNodeConstants.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +77,6 @@
 		C707D9A715E912BE00CD889E /* SettingsReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsReader.cpp; sourceTree = "<group>"; };
 		C707D9A815E912BE00CD889E /* SettingNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNode.cpp; sourceTree = "<group>"; };
 		C707D9A915E912BE00CD889E /* SettingsAPI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsAPI.cpp; sourceTree = "<group>"; };
-		C707D9AF15E912D300CD889E /* SettingsAPITest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsAPITest.h; sourceTree = "<group>"; };
 		C707D9B015E912D300CD889E /* TestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRunner.h; sourceTree = "<group>"; };
 		C707D9B315E912D300CD889E /* SettingsAPITest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsAPITest.cpp; sourceTree = "<group>"; };
 		C707D9B415E912D300CD889E /* TestRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRunner.cpp; sourceTree = "<group>"; };
@@ -96,6 +98,11 @@
 		C70CEDC815E7BF5100017A65 /* settingsapi-core-libTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "settingsapi-core-libTests-Info.plist"; sourceTree = "<group>"; };
 		C70CEDCA15E7BF5100017A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C720B2A815EA59B8000CD689 /* libjson.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libjson.framework; path = "../../../../sourceforge-libjson.git/framework/libjson.framework"; sourceTree = "<group>"; };
+		C7C1DB5415F1D8CC00C4D303 /* SettingsWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWriter.h; sourceTree = "<group>"; };
+		C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsWriter.cpp; sourceTree = "<group>"; };
+		C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNodeTest.cpp; sourceTree = "<group>"; };
+		C7C1DB5C15F318B800C4D303 /* SettingNodeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNodeConstants.h; sourceTree = "<group>"; };
+		C7C1DB5D15F4327000C4D303 /* SettingNodeConstants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNodeConstants.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +168,7 @@
 		C707D9A615E912BE00CD889E /* libjson0 */ = {
 			isa = PBXGroup;
 			children = (
+				C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */,
 				C707D9A715E912BE00CD889E /* SettingsReader.cpp */,
 			);
 			path = libjson0;
@@ -179,7 +187,7 @@
 		C707D9AE15E912D300CD889E /* include */ = {
 			isa = PBXGroup;
 			children = (
-				C707D9AF15E912D300CD889E /* SettingsAPITest.h */,
+				C7C1DB5B15F318B800C4D303 /* settingsapi */,
 				C707D9B015E912D300CD889E /* TestRunner.h */,
 			);
 			path = include;
@@ -197,6 +205,8 @@
 		C707D9B215E912D300CD889E /* settingsapi */ = {
 			isa = PBXGroup;
 			children = (
+				C7C1DB5D15F4327000C4D303 /* SettingNodeConstants.cpp */,
+				C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */,
 				C707D9B315E912D300CD889E /* SettingsAPITest.cpp */,
 			);
 			path = settingsapi;
@@ -244,6 +254,7 @@
 		C707D9DC15E99D7700CD889E /* libjson0 */ = {
 			isa = PBXGroup;
 			children = (
+				C7C1DB5415F1D8CC00C4D303 /* SettingsWriter.h */,
 				C707D9DE15E99D7700CD889E /* SettingsReader.h */,
 			);
 			path = libjson0;
@@ -317,6 +328,14 @@
 				C70CEDC915E7BF5100017A65 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7C1DB5B15F318B800C4D303 /* settingsapi */ = {
+			isa = PBXGroup;
+			children = (
+				C7C1DB5C15F318B800C4D303 /* SettingNodeConstants.h */,
+			);
+			path = settingsapi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,6 +468,7 @@
 				C707D9AA15E912BE00CD889E /* SettingsReader.cpp in Sources */,
 				C707D9AB15E912BE00CD889E /* SettingNode.cpp in Sources */,
 				C707D9AC15E912BE00CD889E /* SettingsAPI.cpp in Sources */,
+				C7C1DB5815F1D90600C4D303 /* SettingsWriter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +478,9 @@
 			files = (
 				C707D9B515E912D300CD889E /* SettingsAPITest.cpp in Sources */,
 				C707D9B615E912D300CD889E /* TestRunner.cpp in Sources */,
+				C7322DA415F6D4C600A4B066 /* SettingNodeTest.cpp in Sources */,
 				C707D9E915E9A88D00CD889E /* settingsapiTests.mm in Sources */,
+				C7C1DB5E15F4327000C4D303 /* SettingNodeConstants.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +539,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -543,7 +565,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -624,11 +646,12 @@
 				HEADER_SEARCH_PATHS = (
 					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
 					"${SRCROOT}/../../../test/include",
-					"${SRCROOT}/../../../include/**",
+					"${SRCROOT}/../../../include",
 				);
 				INFOPLIST_FILE = "settingsapi-core-libTests/settingsapi-core-libTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -647,11 +670,12 @@
 				HEADER_SEARCH_PATHS = (
 					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
 					"${SRCROOT}/../../../test/include",
-					"${SRCROOT}/../../../include/**",
+					"${SRCROOT}/../../../include",
 				);
 				INFOPLIST_FILE = "settingsapi-core-libTests/settingsapi-core-libTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;

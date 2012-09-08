@@ -12,7 +12,21 @@
 
 namespace settingsapi {
 
-SettingNodeInterface::SettingNodeType SettingNode::getType() {
+SettingNode::SettingNode() {
+    this->type_ = SettingNodeType::UNDEFINED;
+    this->key_ = "";
+    this->value_= "";
+    this->childrenNodes_ = std::vector<SettingNodeInterface*>();
+    this->parentNode_ = NULL;
+    this->internalNode_ = NULL;
+}
+
+    
+SettingNode::~SettingNode() {
+
+}
+    
+SettingNodeInterface::SettingNodeType SettingNode::getType() const {
     return this->type_;
 }
     
@@ -20,7 +34,7 @@ void SettingNode::setType(SettingNodeInterface::SettingNodeType type) {
     this->type_ = type;
 }
 
-std::string SettingNode::getKey() {
+std::string SettingNode::getKey() const {
     return this->key_;
 }
     
@@ -29,7 +43,7 @@ void SettingNode::setKey(std::string key)
     this->key_ = key;
 }
 
-std::string SettingNode::readString() {
+std::string SettingNode::readString() const {
     return this->value_;
 }
     
@@ -70,7 +84,10 @@ void SettingNode::lookupValue(std::string key, SettingNodeInterface* value) {
 }
     
 void SettingNode::setValue(std::string value){
-    this->value_ = value;
+    if (this->getType() == SettingNodeType::VALUE)
+    {
+        this->value_ = value;
+    }
 }
 
 bool SettingNode::empty() {
@@ -87,14 +104,65 @@ void SettingNode::setParentNode(SettingNodeInterface* node) {
 
 void SettingNode::addChildNode(SettingNodeInterface* node)
 {
-    this->childrenNodes_.push_back(node);
-    node->setParentNode(this);
+    if (this->getType() == SettingNodeType::OBJECT
+        || this->getType() == SettingNodeType::ARRAY)
+    {
+        this->childrenNodes_.push_back(node);
+        node->setParentNode(this);
+    }
 }
 
-std::vector<SettingNodeInterface*> SettingNode::getChildren() {
+std::vector<SettingNodeInterface*> SettingNode::getChildren() const {
 
     return this->childrenNodes_;
 }
+    
+bool SettingNode::equalsTreeNode(const SettingNodeInterface& node) const {
+    if (this == &node) {return true;}
+    
+    // Check nodes themselves are equal
+    if (!this->equalsNode(node)) {return false;}
+
+    // Check nodes have same number of children
+    size_t aSize = this->childrenNodes_.size();
+    size_t bSize = node.getChildren().size();
+    if (aSize != bSize) {return false;}
+    if (aSize == 0) {return true;}
+    
+    // Check each child in both nodes are equals 
+    std::vector<SettingNodeInterface*>::const_iterator ita = this->childrenNodes_.begin();
+    std::vector<SettingNodeInterface*>::const_iterator itb = node.getChildren().begin();
+    
+    bool isTreeNodeEqual = false;
+    while (ita != this->childrenNodes_.end()
+           && itb != node.getChildren().end()) {
+        isTreeNodeEqual = ((*ita)->equalsTreeNode(*(*itb)));
+        ++ita;
+        ++itb;
+    }
+//
+//    
+//    while (ita != this->childrenNodes_.end()
+//           && itb != node.getChildren().end()
+//           && (*ita)->equalsTreeNode(*(*itb))) {
+//        ++ita;
+//        ++itb;
+//    }
+    return isTreeNodeEqual;
+}
+    
+bool SettingNode::equalsNode(const SettingNodeInterface& node) const {
+    if (&node == NULL) {return false;}
+    if (this == &node) {return true;}
+    if ((this->getKey().compare(node.getKey()) != 0)
+        || (this->readString().compare(node.readString()) != 0)
+        || (this->getType() != node.getType()))
+    {
+        return false;
+    }
+    return true;
+}
+
     
 void* SettingNode::getInternalNode() {
     return this->internalNode_;

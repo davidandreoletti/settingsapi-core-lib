@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "settingsapi::impl::json::libjson0::buildNativeJSONTreeNode(settingsapi::SettingNodeInterface*):SettingsWriter.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "settingsapi::test::SettingsAPITestSuite::writeConfigurationFile::test_method():SettingsAPITest.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "kJSONContent">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "settingsapi::test::SettingsAPITestSuite::readConfigurationFile::test_method():SettingsAPITest.cpp">
          <PersistentStrings>
             <PersistentString

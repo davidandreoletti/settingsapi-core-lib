@@ -21,7 +21,7 @@ namespace libjson0 {
  */
 class SettingsReader : settingsapi::SettingsReaderInterface {
  private:
-    // Inherits from SettingsAPIParserInterface.h
+    // Inherits from SettingsReaderInterface
     virtual ~SettingsReader();
     virtual SettingNode* parse(std::string content);
 };
