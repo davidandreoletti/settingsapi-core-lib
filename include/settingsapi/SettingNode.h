@@ -11,7 +11,7 @@
 
 #include <string>
 #include <vector>
-#include "./SettingNodeInterface.h"
+#include "./settingsapi/SettingNodeInterface.h"
 
 namespace settingsapi {
 

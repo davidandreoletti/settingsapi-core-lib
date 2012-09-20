@@ -9,7 +9,7 @@
 #ifndef INCLUDE_SETTINGSAPI_SETTINGSWRITERINTERFACE_H_
 #define INCLUDE_SETTINGSAPI_SETTINGSWRITERINTERFACE_H_
 
-#include "./SettingNodeInterface.h"
+#include "./settingsapi/SettingNodeInterface.h"
 
 #include <string>
 

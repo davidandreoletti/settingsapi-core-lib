@@ -37,16 +37,15 @@
 		C707D9AC15E912BE00CD889E /* SettingsAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A915E912BE00CD889E /* SettingsAPI.cpp */; };
 		C707D9B515E912D300CD889E /* SettingsAPITest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9B315E912D300CD889E /* SettingsAPITest.cpp */; };
 		C707D9B615E912D300CD889E /* TestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9B415E912D300CD889E /* TestRunner.cpp */; };
-		C707D9E615E9A70600CD889E /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C707D9E415E9A4CC00CD889E /* boost.framework */; };
 		C707D9E915E9A88D00CD889E /* settingsapiTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = C707D9E815E9A88D00CD889E /* settingsapiTests.mm */; };
 		C70CEDB015E7BF5100017A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAF15E7BF5100017A65 /* Foundation.framework */; };
 		C70CEDBF15E7BF5100017A65 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDBE15E7BF5100017A65 /* SenTestingKit.framework */; };
 		C70CEDC215E7BF5100017A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAF15E7BF5100017A65 /* Foundation.framework */; };
 		C70CEDC515E7BF5100017A65 /* libsettingsapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
 		C70CEDCB15E7BF5100017A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70CEDC915E7BF5100017A65 /* InfoPlist.strings */; };
-		C720B2A915EA59B8000CD689 /* libjson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C720B2A815EA59B8000CD689 /* libjson.framework */; };
-		C720B2AA15EA59B8000CD689 /* libjson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C720B2A815EA59B8000CD689 /* libjson.framework */; };
 		C7322DA415F6D4C600A4B066 /* SettingNodeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */; };
+		C74628331606A35600717E19 /* libjson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628321606A35600717E19 /* libjson.a */; };
+		C74628351606A37900717E19 /* libboost_unit_test_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628341606A37900717E19 /* libboost_unit_test_framework.a */; };
 		C7C1DB5815F1D90600C4D303 /* SettingsWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */; };
 		C7C1DB5E15F4327000C4D303 /* SettingNodeConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5D15F4327000C4D303 /* SettingNodeConstants.cpp */; };
 /* End PBXBuildFile section */
@@ -87,7 +86,6 @@
 		C707D9E115E99D7700CD889E /* SettingsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsAPI.h; sourceTree = "<group>"; };
 		C707D9E215E99D7700CD889E /* SettingsReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsReaderInterface.h; sourceTree = "<group>"; };
 		C707D9E315E99D7700CD889E /* SettingsWriterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWriterInterface.h; sourceTree = "<group>"; };
-		C707D9E415E9A4CC00CD889E /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = "/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost/boost.framework"; sourceTree = "<absolute>"; };
 		C707D9E715E9A88D00CD889E /* settingsapiTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsapiTests.h; sourceTree = "<group>"; };
 		C707D9E815E9A88D00CD889E /* settingsapiTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = settingsapiTests.mm; sourceTree = "<group>"; };
 		C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsettingsapi.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +95,8 @@
 		C70CEDBE15E7BF5100017A65 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C70CEDC815E7BF5100017A65 /* settingsapi-core-libTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "settingsapi-core-libTests-Info.plist"; sourceTree = "<group>"; };
 		C70CEDCA15E7BF5100017A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C720B2A815EA59B8000CD689 /* libjson.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libjson.framework; path = "../../../../sourceforge-libjson.git/framework/libjson.framework"; sourceTree = "<group>"; };
+		C74628321606A35600717E19 /* libjson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjson.a; path = "../../../libs/sourceforge-libjson.git/prefix/lib/libjson.a"; sourceTree = "<group>"; };
+		C74628341606A37900717E19 /* libboost_unit_test_framework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_unit_test_framework.a; path = "../../../libs/boostoniphone-generic.git/prefix/lib/libboost_unit_test_framework.a"; sourceTree = "<group>"; };
 		C7C1DB5415F1D8CC00C4D303 /* SettingsWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWriter.h; sourceTree = "<group>"; };
 		C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsWriter.cpp; sourceTree = "<group>"; };
 		C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNodeTest.cpp; sourceTree = "<group>"; };
@@ -111,7 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70CEDB015E7BF5100017A65 /* Foundation.framework in Frameworks */,
-				C720B2A915EA59B8000CD689 /* libjson.framework in Frameworks */,
+				C74628331606A35600717E19 /* libjson.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,9 +120,8 @@
 			files = (
 				C70CEDBF15E7BF5100017A65 /* SenTestingKit.framework in Frameworks */,
 				C70CEDC215E7BF5100017A65 /* Foundation.framework in Frameworks */,
-				C707D9E615E9A70600CD889E /* boost.framework in Frameworks */,
 				C70CEDC515E7BF5100017A65 /* libsettingsapi.a in Frameworks */,
-				C720B2AA15EA59B8000CD689 /* libjson.framework in Frameworks */,
+				C74628351606A37900717E19 /* libboost_unit_test_framework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +283,8 @@
 		C70CEDAE15E7BF5100017A65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C720B2A815EA59B8000CD689 /* libjson.framework */,
-				C707D9E415E9A4CC00CD889E /* boost.framework */,
+				C74628341606A37900717E19 /* libboost_unit_test_framework.a */,
+				C74628321606A35600717E19 /* libjson.a */,
 				C70CEDAF15E7BF5100017A65 /* Foundation.framework */,
 				C70CEDBE15E7BF5100017A65 /* SenTestingKit.framework */,
 			);
@@ -443,7 +441,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ${PROJECT_DIR}/../../../scripts/doc\nchmod 700 ./tool-docset.sh\n./tool-docset.sh -f \"${PROJECT_DIR}/../../../doc/developer.doxyfile\" -s \"${PROJECT_DIR}/../../../src \\\n${PROJECT_DIR}/../../../include\" -o \"${PROJECT_DIR}/../../../doc/developer\" -n \"API\" -r \"com.iostark\" -l \"true\"";
+			shellScript = "cd ${PROJECT_DIR}/../../../scripts/doc\nchmod 700 ./tool-docset.sh\n./tool-docset.sh -f \"${PROJECT_DIR}/../../../doc/developer/developer.doxyfile\" -s \"${PROJECT_DIR}/../../../src \\\n${PROJECT_DIR}/../../../include\" -o \"${PROJECT_DIR}/../../../doc/developer\" -n \"API\" -r \"com.iostark\" -l \"true\"";
 		};
 		C70CEDBB15E7BF5100017A65 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -539,7 +537,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -554,8 +552,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../libs/sourceforge-libjson.git/prefix/lib/include",
+					"${SRCROOT}/../../../libs/boostoniphone-generic.git/prefix/include",
+					"${SRCROOT}/../../../libs/target-conditionals.git/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../libs/sourceforge-libjson.git/prefix/lib/";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -565,7 +568,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -574,8 +577,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../libs/sourceforge-libjson.git/prefix/lib/include",
+					"${SRCROOT}/../../../libs/boostoniphone-generic.git/prefix/include",
+					"${SRCROOT}/../../../libs/target-conditionals.git/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../libs/sourceforge-libjson.git/prefix/lib/";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -585,11 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/settingsapi_core_lib.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost\"",
-					"\"$(SRCROOT)/../../../../sourceforge-libjson.git/framework\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "settingsapi-core-lib/settingsapi-core-lib-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -598,13 +602,13 @@
 					"NDEBUG=1",
 				);
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/../../../include/**",
-					"${SRCROOT}/../../../libs/ios/libjson/sourceforge-libjson.git/bin/include/libjson",
-					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
+					"${SRCROOT}/../../../include",
+					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -613,21 +617,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/settingsapi_core_lib.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost\"",
-					"\"$(SRCROOT)/../../../../sourceforge-libjson.git/framework\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "settingsapi-core-lib/settingsapi-core-lib-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/../../../include/**",
-					"${SRCROOT}/../../../libs/ios/libjson/sourceforge-libjson.git/bin/include/libjson",
-					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
+					"${SRCROOT}/../../../include",
+					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -638,18 +638,19 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost\"",
-					"\"$(SRCROOT)/../../../../sourceforge-libjson.git/framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "settingsapi-core-lib/settingsapi-core-lib-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
-					"${SRCROOT}/../../../test/include",
+					"$(inherited)",
 					"${SRCROOT}/../../../include",
+					"${SRCROOT}/../../../test/include",
 				);
 				INFOPLIST_FILE = "settingsapi-core-libTests/settingsapi-core-libTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../libs/boostoniphone-generic.git/prefix/lib/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = octest;
@@ -662,18 +663,19 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"/Volumes/Vault/Documents/Developments/IOS_WORKSPACES/POMODORO_WORKSPACE/pomodoro-core-lib.git/libs/ios/boost\"",
-					"\"$(SRCROOT)/../../../../sourceforge-libjson.git/framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "settingsapi-core-lib/settingsapi-core-lib-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/../../../../../any/target-conditionals.git/include",
-					"${SRCROOT}/../../../test/include",
+					"$(inherited)",
 					"${SRCROOT}/../../../include",
+					"${SRCROOT}/../../../test/include",
 				);
 				INFOPLIST_FILE = "settingsapi-core-libTests/settingsapi-core-libTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../libs/boostoniphone-generic.git/prefix/lib/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = octest;

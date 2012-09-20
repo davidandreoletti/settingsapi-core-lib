@@ -8,12 +8,13 @@
 
 #include <errno.h>
 #include <cstdlib>
+#include <climits>
 #include "./settingsapi/SettingNode.h"
 
 namespace settingsapi {
 
-SettingNode::SettingNode() {
-    this->type_ = SettingNodeType::UNDEFINED;
+    SettingNode::SettingNode() {
+    this->type_ = SettingNodeInterface::TYPE_UNDEFINED;
     this->key_ = "";
     this->value_= "";
     this->childrenNodes_ = std::vector<SettingNodeInterface*>();

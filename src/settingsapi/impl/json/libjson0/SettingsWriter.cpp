@@ -7,7 +7,7 @@
 //
 
 #include "./settingsapi/impl/json/libjson0/SettingsWriter.h"
-#include <libjson/libjson.h>
+#include "libjson/libjson.h"
 
 namespace settingsapi {
 namespace impl {

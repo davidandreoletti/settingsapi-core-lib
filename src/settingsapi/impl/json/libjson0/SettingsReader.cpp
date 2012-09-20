@@ -6,8 +6,9 @@
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
+#include <cstring> //  for strcpy(...)
 #include "./settingsapi/impl/json/libjson0/SettingsReader.h"
-#include <libjson/libjson.h>
+#include "libjson/libjson.h"
 
 namespace settingsapi {
 namespace impl {

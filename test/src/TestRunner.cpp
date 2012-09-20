@@ -12,6 +12,7 @@
 //  Boost Test Library
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
+#include "./boost/test/unit_test.hpp"
 
 //  Boost Exit codes
 #include <boost/cstdlib.hpp>
