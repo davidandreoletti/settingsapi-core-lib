@@ -20,16 +20,16 @@ namespace libjson0 {
  *  \param n A libjson's node instance
  *\ \return Equivalent in SettingNodeInterface
  */
-SettingNodeInterface::SettingNodeType identifyNodeType(JSONNODE* n)
+settingsapi::SettingNodeInterface::Type identifyNodeType(JSONNODE* n)
 {
     char nodeType = json_type(n);
     if (nodeType == JSON_NODE) {
-        return SettingNodeInterface::SettingNodeType::OBJECT;
+        return SettingNodeInterface::TYPE_OBJECT;
     }
     if (nodeType == JSON_ARRAY) {
-        return SettingNodeInterface::SettingNodeType::ARRAY;
+        return settingsapi::SettingNodeInterface::TYPE_ARRAY;
     }
-    return SettingNodeInterface::SettingNodeType::VALUE;
+    return settingsapi::SettingNodeInterface::TYPE_VALUE;
 }
     
 /**
@@ -37,11 +37,11 @@ SettingNodeInterface::SettingNodeType identifyNodeType(JSONNODE* n)
  * \param parentLjn Libjson node to parse. NULL if no parent
  * \return SettingNode equivalent to parentLjn including children
  */
-SettingNode* parseRecusively(JSONNODE* parentLjn)
+settingsapi::SettingNode* parseRecusively(JSONNODE* parentLjn)
 {
     if (parentLjn == NULL || parentLjn == JSON_NULL){ return NULL;}
     
-    SettingNode* parentNode = new SettingNode();
+    settingsapi::SettingNode* parentNode = new settingsapi::SettingNode();
     parentNode->setType(identifyNodeType(parentLjn));
     parentNode->setInternalNode((void*)parentLjn);
     parentNode->setKey(json_name(parentLjn));
@@ -57,7 +57,7 @@ SettingNode* parseRecusively(JSONNODE* parentLjn)
             return NULL;
         }
         else{
-            SettingNode* cn = parseRecusively(child);
+            settingsapi::SettingNode* cn = parseRecusively(child);
             parentNode->addChildNode((SettingNodeInterface*)cn);
             // Increment the iterator
             ++it;
@@ -70,7 +70,7 @@ SettingsReader::~SettingsReader(){
 
 }
     
-SettingNode* SettingsReader::parse(std::string content) {
+settingsapi::SettingNode* SettingsReader::parse(std::string content) {
     char* contentAsCString = new char[content.size()+1];
     strcpy(contentAsCString, content.c_str());
     JSONNODE* n = json_parse(contentAsCString);

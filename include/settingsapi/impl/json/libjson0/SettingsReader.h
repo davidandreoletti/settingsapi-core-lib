@@ -23,7 +23,7 @@ class SettingsReader : settingsapi::SettingsReaderInterface {
  private:
     // Inherits from SettingsReaderInterface
     virtual ~SettingsReader();
-    virtual SettingNode* parse(std::string content);
+    virtual settingsapi::SettingNode* parse(std::string content);
 };
 
 }}}}  // namespaces

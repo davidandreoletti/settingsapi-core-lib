@@ -10,12 +10,12 @@ class SettingNodeConstants
 {
  public:
 // Predefiend JSON Nodes Types
-static const settingsapi::SettingNodeInterface::SettingNodeType kMyNode0Type;
+static const settingsapi::SettingNodeInterface::Type kMyNode0Type;
 static const std::string kMyNode0Key;
 static const std::string kMyNode0Value;
-static const settingsapi::SettingNodeInterface::SettingNodeType kMyNode1Type;
+static const settingsapi::SettingNodeInterface::Type kMyNode1Type;
 static const std::string kMyNode1Key;
-static const settingsapi::SettingNodeInterface::SettingNodeType kMyNode2Type;
+static const settingsapi::SettingNodeInterface::Type kMyNode2Type;
 static const std::string kMyNode2Key;
 
 static settingsapi::SettingNodeInterface* createNewValueNode();

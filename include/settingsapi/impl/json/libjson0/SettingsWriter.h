@@ -23,7 +23,7 @@ class SettingsWriter : settingsapi::SettingsWriterInterface {
  private:
     // Inherits from SettingsWriterInterface
     virtual ~SettingsWriter();
-    virtual std::string write(SettingNodeInterface* node);
+    virtual std::string write(settingsapi::SettingNodeInterface* node);
 };
 
 }}}}  // namespaces

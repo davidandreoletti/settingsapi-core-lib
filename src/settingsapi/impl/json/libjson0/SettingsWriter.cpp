@@ -19,12 +19,12 @@ namespace libjson0 {
  *  \param nodeType A SettingsAPI' settings type
  *\ \return Equivalent in libjson type
  */
-    char identifyNodeType(SettingNodeInterface::SettingNodeType nodeType)
+    char identifyNodeType(settingsapi::SettingNodeInterface::Type nodeType)
 {
-    if (nodeType == SettingNodeInterface::SettingNodeType::OBJECT) {
+    if (nodeType == settingsapi::SettingNodeInterface::TYPE_OBJECT) {
         return JSON_NODE;
     }
-    if (nodeType == SettingNodeInterface::SettingNodeType::ARRAY) {
+    if (nodeType == settingsapi::SettingNodeInterface::TYPE_ARRAY) {
         return JSON_ARRAY;
     }
     return JSON_STRING;
@@ -36,10 +36,10 @@ namespace libjson0 {
  * \return libjson's equivalent to SettingNode including children. 
  *          If parentAbstractNode is null, then empty native node is returned
  */
-JSONNODE* buildNativeJSONTreeNode(SettingNodeInterface* pANode)
+JSONNODE* buildNativeJSONTreeNode(settingsapi::SettingNodeInterface* pANode)
 {
     if (pANode == NULL) {
-        return json_new(identifyNodeType(SettingNodeInterface::SettingNodeType::OBJECT));
+        return json_new(identifyNodeType(settingsapi::SettingNodeInterface::TYPE_OBJECT));
     }
     
     JSONNODE* pNNode = json_new(identifyNodeType(pANode->getType()));
@@ -47,19 +47,19 @@ JSONNODE* buildNativeJSONTreeNode(SettingNodeInterface* pANode)
     
     switch (pANode->getType())
     {
-        case SettingNodeInterface::SettingNodeType::VALUE:
+        case settingsapi::SettingNodeInterface::TYPE_VALUE:
         {
             json_set_a(pNNode, pANode->readString().c_str());
             break;
         }
-        case SettingNodeInterface::SettingNodeType::OBJECT:
-        case SettingNodeInterface::SettingNodeType::ARRAY:
+        case settingsapi::SettingNodeInterface::TYPE_OBJECT:
+        case settingsapi::SettingNodeInterface::TYPE_ARRAY:
         {
-            std::vector<SettingNodeInterface*> children = pANode->getChildren();
-            std::vector<SettingNodeInterface*>::iterator it = children.begin();
+            std::vector<settingsapi::SettingNodeInterface*> children = pANode->getChildren();
+            std::vector<settingsapi::SettingNodeInterface*>::iterator it = children.begin();
             while(it != children.end())
             {
-                SettingNodeInterface* cANode = *it;
+                settingsapi::SettingNodeInterface* cANode = *it;
                 JSONNODE* cNChild = buildNativeJSONTreeNode(cANode);
                 json_insert(pNNode, json_end(pNNode), cNChild);
                 ++it;
@@ -77,7 +77,7 @@ SettingsWriter::~SettingsWriter(){
 
 }
     
-std::string SettingsWriter::write(SettingNodeInterface* node) {
+std::string SettingsWriter::write(settingsapi::SettingNodeInterface* node) {
     JSONNODE* rootNode = buildNativeJSONTreeNode(node);
     std::string confContent = json_write_formatted(rootNode);
     return confContent;

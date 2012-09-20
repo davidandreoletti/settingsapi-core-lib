@@ -27,8 +27,8 @@ class SettingNode :  SettingNodeInterface {
     
     // Inherited from SettingNodeInterface
     virtual ~SettingNode();
-    virtual SettingNodeInterface::SettingNodeType getType() const;
-    virtual void setType(SettingNodeInterface::SettingNodeType type);
+    virtual SettingNodeInterface::Type getType() const;
+    virtual void setType(SettingNodeInterface::Type type);
     virtual std::string getKey() const;
     virtual void setKey(std::string key);
     virtual std::string readString() const;
@@ -57,7 +57,7 @@ class SettingNode :  SettingNodeInterface {
  	/**
  	 * Node type
  	 */ 
- 	SettingNodeInterface::SettingNodeType type_;
+ 	SettingNodeInterface::Type type_;
 
  	/**
  	 * Node's key

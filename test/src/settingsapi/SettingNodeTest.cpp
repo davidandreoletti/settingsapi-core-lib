@@ -49,12 +49,12 @@ BOOST_AUTO_TEST_CASE(setValue) {
     
 BOOST_AUTO_TEST_CASE(equalsNode) {
     SettingNodeInterface* nodeA = (SettingNodeInterface*) new SettingNode();
-    nodeA->setType(SettingNodeInterface::SettingNodeType::OBJECT);
+    nodeA->setType(SettingNodeInterface::TYPE_OBJECT);
     nodeA->setKey(SettingNodeConstants::kMyNode0Key);
     nodeA->setValue(SettingNodeConstants::kMyNode0Value);
     
     SettingNodeInterface* nodeB = (SettingNodeInterface*) new SettingNode();
-    nodeB->setType(SettingNodeInterface::SettingNodeType::OBJECT);
+    nodeB->setType(SettingNodeInterface::TYPE_OBJECT);
     nodeB->setKey(SettingNodeConstants::kMyNode0Key);
     nodeB->setValue(SettingNodeConstants::kMyNode0Value);
     

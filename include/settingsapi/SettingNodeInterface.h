@@ -28,24 +28,24 @@ class SettingNodeInterface {
     /**
      * Types
      */
-    enum SettingNodeType {
-        UNDEFINED,         /** Undefined */
-        OBJECT,            /** Object */
-        ARRAY,             /** Array */
-        VALUE              /** Value */
+    enum Type {
+            TYPE_UNDEFINED,         /** Undefined */
+            TYPE_OBJECT,            /** Object */
+            TYPE_ARRAY,             /** Array */
+            TYPE_VALUE              /** Value */
     };
 
     /**
      * Gets type
      * \return Type.
      */
-    virtual SettingNodeType getType() const = 0;
+    virtual SettingNodeInterface::Type getType() const = 0;
     
     /**
      * Sets type
      * \param Type.
      */
-    virtual void setType(SettingNodeType type) = 0;
+    virtual void setType(SettingNodeInterface::Type type) = 0;
     
     /**
      * Gets key

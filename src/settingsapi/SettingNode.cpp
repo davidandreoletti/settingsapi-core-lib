@@ -27,11 +27,11 @@ SettingNode::~SettingNode() {
 
 }
     
-SettingNodeInterface::SettingNodeType SettingNode::getType() const {
+SettingNodeInterface::Type SettingNode::getType() const {
     return this->type_;
 }
     
-void SettingNode::setType(SettingNodeInterface::SettingNodeType type) {
+void SettingNode::setType(SettingNodeInterface::Type type) {
     this->type_ = type;
 }
 
@@ -71,7 +71,7 @@ int SettingNode::readInt32(stringToInt32_Status &r) {
 }
     
 void SettingNode::setValue(std::string value){
-    if (this->getType() == SettingNodeType::VALUE)
+    if (this->getType() == SettingNodeInterface::TYPE_VALUE)
     {
         this->value_ = value;
     }
@@ -91,8 +91,8 @@ void SettingNode::setParentNode(SettingNodeInterface* node) {
 
 void SettingNode::addChildNode(SettingNodeInterface* node)
 {
-    if (this->getType() == SettingNodeType::OBJECT
-        || this->getType() == SettingNodeType::ARRAY)
+    if (this->getType() == SettingNodeInterface::TYPE_OBJECT
+        || this->getType() == SettingNodeInterface::TYPE_ARRAY)
     {
         this->childrenNodes_.push_back(node);
         node->setParentNode(this);

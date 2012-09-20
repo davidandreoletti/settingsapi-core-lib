@@ -12,12 +12,12 @@
 namespace settingsapi {
 namespace test {
     
-const settingsapi::SettingNodeInterface::SettingNodeType SettingNodeConstants::kMyNode0Type = settingsapi::SettingNodeInterface::SettingNodeType::VALUE;
+const settingsapi::SettingNodeInterface::Type SettingNodeConstants::kMyNode0Type = settingsapi::SettingNodeInterface::TYPE_VALUE;
 const std::string SettingNodeConstants::kMyNode0Key = "david";
 const std::string SettingNodeConstants::kMyNode0Value = "ling";
-const settingsapi::SettingNodeInterface::SettingNodeType SettingNodeConstants::kMyNode1Type = settingsapi::SettingNodeInterface::SettingNodeType::ARRAY;
+const settingsapi::SettingNodeInterface::Type SettingNodeConstants::kMyNode1Type = settingsapi::SettingNodeInterface::TYPE_ARRAY;
 const std::string SettingNodeConstants::kMyNode1Key = "tiny";
-const settingsapi::SettingNodeInterface::SettingNodeType SettingNodeConstants::kMyNode2Type = settingsapi::SettingNodeInterface::SettingNodeType::OBJECT;
+const settingsapi::SettingNodeInterface::Type SettingNodeConstants::kMyNode2Type = settingsapi::SettingNodeInterface::TYPE_OBJECT;
 const std::string SettingNodeConstants::kMyNode2Key = "lola";
     
 settingsapi::SettingNodeInterface* SettingNodeConstants::createNewValueNode()
