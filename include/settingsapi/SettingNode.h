@@ -50,7 +50,7 @@ class SettingNode :  SettingNodeInterface {
     
     /**
      * Sets the internal node returned by parser to this node
-     * \param Internal node
+     * \param node Library specific node representation
      */
     virtual void setInternalNode(void* node);
  private:

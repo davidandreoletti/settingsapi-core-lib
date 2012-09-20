@@ -43,7 +43,7 @@ class SettingNodeInterface {
     
     /**
      * Sets type
-     * \param Type.
+     * \param type Type.
      */
     virtual void setType(SettingNodeInterface::Type type) = 0;
     
@@ -76,8 +76,8 @@ class SettingNodeInterface {
     
     /**
      * Set the value associated to the key:
-     * - if type is \link SettingNodeType::VALUE \endlink, then this node value is set
-     * - if type is NOT \link SettingNodeType::VALUE \endlink, then this node value is NOT set
+     * - if type is \link TYPE_VALUE \endlink, then this node value is set
+     * - if type is NOT \link TYPE_VALUE \endlink, then this node value is NOT set
      * \param value The value
      */
     virtual void setValue(std::string value) = 0;
@@ -96,12 +96,12 @@ class SettingNodeInterface {
     
     /**
      * Sets the parent node
-     * \param New parent node
+     * \param node New parent node
      */
     virtual void setParentNode(SettingNodeInterface* node) = 0;
     
     /**
-     * Adds a child to this node if and only if this node is of type \link SettingNodeType::OBJECT \endlink or \link SettingNodeType::ARRAY \endlink
+     * Adds a child to this node if and only if this node is of type \link TYPE_OBJECT \endlink or \link TYPE_ARRAY \endlink
      * 
      * \param node New child
      */
@@ -118,7 +118,7 @@ class SettingNodeInterface {
      *
      * Two tree nodes are equals if and only if:
      * - each tree has the same tree structures
-     * - each nodes within the tree structure are equal. See \link ::equalsNode(const SettingNodeInterface&) \endlink
+     * - each nodes within the tree structure are equal. See \link equalsNode(const SettingNodeInterface& ) const \endlink
      * \param node Tree Node to check against
      * \return True if both are equal
      */

@@ -22,7 +22,7 @@ class SettingsAPI {
  public:
     /**
      * Reads a configuration file's content
-     * \param settingsFileContent File's content
+     * \param configurationFileContent File's content
      * \return Root SettingNodeInterface representing root of the entire tree node
      */
     SettingNodeInterface* readConfigurationFile(std::string configurationFileContent);
