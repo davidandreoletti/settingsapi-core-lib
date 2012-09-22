@@ -1,3 +1,9 @@
+Release 1.2.0f0:
+
+PSETLCOR-12: [iOS] Built iOS device library via Makefile
+
+PSETLCOR-11: [iOS] Copy iOS library to prefix directory after building library
+
 Release 1.1.0f0:
 
 PSETLCOR-10: Use libjson by default regardless of the target platform

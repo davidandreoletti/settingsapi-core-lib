@@ -16,8 +16,9 @@ to to read/write configurations files
 INSTALLATION:
 ================================================================================
 
-- Go to proj/proj.ios/settingsapi-core-lib/
-- Open Xcode and build the library
+cd proj
+# To build for iOS
+make build-ios
 
 DOCUMENTATION
 ================================================================================
