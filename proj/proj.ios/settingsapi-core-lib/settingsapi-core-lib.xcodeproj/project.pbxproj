@@ -58,6 +58,13 @@
 			remoteGlobalIDString = C70CEDAB15E7BF5100017A65;
 			remoteInfo = "settingsapi-core-lib";
 		};
+		C7744F11160D39B500B4D516 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C70CEDA315E7BF5100017A65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C707D9CB15E99A5A00CD889E;
+			remoteInfo = "check-source-code-against-google-c++-style-guide";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -350,6 +357,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C7744F12160D39B500B4D516 /* PBXTargetDependency */,
 			);
 			name = settingsapi;
 			productName = "settingsapi-core-lib";
@@ -489,6 +497,11 @@
 			isa = PBXTargetDependency;
 			target = C70CEDAB15E7BF5100017A65 /* settingsapi */;
 			targetProxy = C70CEDC315E7BF5100017A65 /* PBXContainerItemProxy */;
+		};
+		C7744F12160D39B500B4D516 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C707D9CB15E99A5A00CD889E /* check-source-code-against-google-c++-style-guide */;
+			targetProxy = C7744F11160D39B500B4D516 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
