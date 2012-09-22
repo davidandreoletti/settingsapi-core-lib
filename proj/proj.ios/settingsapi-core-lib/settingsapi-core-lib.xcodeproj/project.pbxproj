@@ -46,6 +46,7 @@
 		C7322DA415F6D4C600A4B066 /* SettingNodeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */; };
 		C74628331606A35600717E19 /* libjson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628321606A35600717E19 /* libjson.a */; };
 		C74628351606A37900717E19 /* libboost_unit_test_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628341606A37900717E19 /* libboost_unit_test_framework.a */; };
+		C7BB03A5160DECA8000AD3AA /* libsettingsapi.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
 		C7C1DB5815F1D90600C4D303 /* SettingsWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */; };
 		C7C1DB5E15F4327000C4D303 /* SettingNodeConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5D15F4327000C4D303 /* SettingNodeConstants.cpp */; };
 /* End PBXBuildFile section */
@@ -71,9 +72,10 @@
 		C70CEDAA15E7BF5100017A65 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
+			dstPath = "${PROJECT_DIR}/../../../prefix";
 			dstSubfolderSpec = 0;
 			files = (
+				C7BB03A5160DECA8000AD3AA /* libsettingsapi.a in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +575,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../libs/sourceforge-libjson.git/prefix/lib/";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv6 armv7";
 			};
 			name = Debug;
 		};
@@ -599,6 +602,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../libs/sourceforge-libjson.git/prefix/lib/";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv6 armv7";
 			};
 			name = Release;
 		};
