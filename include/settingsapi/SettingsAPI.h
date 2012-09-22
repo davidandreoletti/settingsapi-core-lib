@@ -2,7 +2,7 @@
 //  SettingsAPI.h
 //  libsettingsapi
 //
-//  Created by Andreoletti David on 7/24/12. 
+//  Created by Andreoletti David on 7/24/12.
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
@@ -25,7 +25,7 @@ class SettingsAPI {
      * \param configurationFileContent File's content
      * \return Root SettingNodeInterface representing root of the entire tree node
      */
-    SettingNodeInterface* readConfigurationFile(std::string configurationFileContent);
+    SettingNodeInterface* readConfigurationFile(std::string configurationFileContent);  // NOLINT(whitespace/line_length)
 
     /**
      * Writes configuration file
@@ -33,7 +33,7 @@ class SettingsAPI {
      * \return String representation of the node tree hierarchy
      */
     std::string writeConfigurationFile(SettingNodeInterface* node);
-    
+
     /**
      * Creates an empty SettingNodeInterface instance
      * \return A new node instance

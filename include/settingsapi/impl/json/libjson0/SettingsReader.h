@@ -2,14 +2,16 @@
 //  SettingsReader.h
 //  libsettingsapi
 //
-//  Created by Andreoletti David on 7/24/12. 
+//  Created by Andreoletti David on 7/24/12.
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
-#ifndef INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON_SETTINGSREADER_H_
-#define INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON_SETTINGSREADER_H_
+#ifndef INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSREADER_H_
+#define INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSREADER_H_
 
 #include "./settingsapi/SettingsReaderInterface.h"
+
+#include <string>  // NOLINT(build/include_order)
 
 namespace settingsapi {
 namespace impl {
@@ -28,4 +30,4 @@ class SettingsReader : settingsapi::SettingsReaderInterface {
 
 }}}}  // namespaces
 
-#endif  // INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON_SETTINGSREADER_H_
+#endif  // INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSREADER_H_

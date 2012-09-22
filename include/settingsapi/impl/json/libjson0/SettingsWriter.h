@@ -2,14 +2,16 @@
 //  SettingsWriter.h
 //  libsettingsapi
 //
-//  Created by Andreoletti David on 7/24/12. 
+//  Created by Andreoletti David on 7/24/12.
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
-#ifndef INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON_SETTINGSWRITER_H_
-#define INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON_SETTINGSWRITER_H_
+#ifndef INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSWRITER_H_
+#define INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSWRITER_H_
 
 #include "./settingsapi/SettingsWriterInterface.h"
+
+#include <string>  // NOLINT(build/include_order)
 
 namespace settingsapi {
 namespace impl {
@@ -28,4 +30,4 @@ class SettingsWriter : settingsapi::SettingsWriterInterface {
 
 }}}}  // namespaces
 
-#endif  // INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON_SETTINGSWRITER_H_
+#endif  // INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSWRITER_H_

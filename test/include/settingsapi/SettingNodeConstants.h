@@ -1,13 +1,21 @@
-#ifndef INCLUDE_SETTINGSAPI_SETTINGNODECONSTANTS_H_
-#define INCLUDE_SETTINGSAPI_SETTINGNODECONSTANTS_H_
+//
+//  SettingNodeConstants.cpp
+//  libsettingapi
+//
+//  Created by Andreoletti David on 3/31/12.
+//  Copyright 2012 IO Stark. All rights reserved.
+//
 
+#ifndef TEST_INCLUDE_SETTINGSAPI_SETTINGNODECONSTANTS_H_
+#define TEST_INCLUDE_SETTINGSAPI_SETTINGNODECONSTANTS_H_
+
+#include <string>
 #include "./settingsapi/SettingNodeInterface.h"
 
 namespace settingsapi {
 namespace test {
 
-class SettingNodeConstants
-{
+class SettingNodeConstants {
  public:
 // Predefiend JSON Nodes Types
 static const settingsapi::SettingNodeInterface::Type kMyNode0Type;
@@ -24,7 +32,6 @@ static settingsapi::SettingNodeInterface* createNewEmptyObjectNode();
 static settingsapi::SettingNodeInterface* createNewNotEmptyArrayNode();
 static settingsapi::SettingNodeInterface* createNewNotEmptyObjectNode();
 };
-    
 }}
 
-#endif //  INCLUDE_SETTINGSAPI_SETTINGNODECONSTANTS_H_
+#endif  // TEST_INCLUDE_SETTINGSAPI_SETTINGNODECONSTANTS_H_

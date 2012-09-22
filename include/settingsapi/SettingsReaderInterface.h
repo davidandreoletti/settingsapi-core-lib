@@ -2,7 +2,7 @@
 //  SettingsReaderInterface.h
 //  libsettingsapi
 //
-//  Created by Andreoletti David on 7/24/12. 
+//  Created by Andreoletti David on 7/24/12.
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 
 #include "./settingsapi/SettingNode.h"
 
-#include <string>
+#include <string>  // NOLINT(build/include_order)
 
 namespace settingsapi {
 
@@ -20,12 +20,11 @@ namespace settingsapi {
  */
 class SettingsReaderInterface {
  public:
-    
     /**
      *  Destructor
      */
     virtual ~SettingsReaderInterface() = 0;
-    
+
     /**
      * Reads a settings file content
      * \param content File content
@@ -33,12 +32,12 @@ class SettingsReaderInterface {
      */
     virtual SettingNode* parse(std::string content) = 0;
 };
-    
+
 /**
  * Pure virtual destructor implementation is required.
  * See http://stackoverflow.com/questions/630950/pure-virtual-destructor-in-c
  */
-inline SettingsReaderInterface::~SettingsReaderInterface(){}
+inline SettingsReaderInterface::~SettingsReaderInterface() {}
 
 }  // namespaces
 

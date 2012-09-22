@@ -2,11 +2,12 @@
 //  SettingsAPI.cpp
 //  libsettingsapi
 //
-//  Created by Andreoletti David on 7/24/12. 
+//  Created by Andreoletti David on 7/24/12.
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
 #include <stack>
+#include <string>
 
 #include "./targetconditionals/TargetConditionals.h"
 #include "./settingsapi/SettingsAPI.h"
@@ -20,27 +21,24 @@
 
 namespace settingsapi {
 
-SettingNodeInterface* SettingsAPI::readConfigurationFile(std::string configurationFileContent)
-{
+SettingNodeInterface* SettingsAPI::readConfigurationFile(std::string configurationFileContent) {  // NOLINT(whitespace/line_length)
     SettingNodeInterface* n = NULL;
     SettingsReaderInterface* sni = NULL;
 #if defined(TC_PLATFORMS_PLATFORM_APPLE_IOS)
     namespace ijl = impl::json::libjson0;
-    sni = (SettingsReaderInterface*) new ijl::SettingsReader();
-    n = (SettingNodeInterface*) sni->parse(configurationFileContent);
+    sni = reinterpret_cast<SettingsReaderInterface*>(new ijl::SettingsReader());
+    n = reinterpret_cast<SettingNodeInterface*>(sni->parse(configurationFileContent));  // NOLINT(whitespace/line_length)
 #else
 #   error Platform NOT supported
 #endif
     delete sni;
     return n;
 }
-    
-std::string SettingsAPI::writeConfigurationFile(SettingNodeInterface* node)
-{
-#if defined(TC_PLATFORMS_PLATFORM_APPLE_IOS)
+
+std::string SettingsAPI::writeConfigurationFile(SettingNodeInterface* node) {
     namespace ijl = impl::json::libjson0;
     SettingsWriterInterface* swi = NULL;
-    swi = (SettingsWriterInterface*) new ijl::SettingsWriter();
+    swi = reinterpret_cast<SettingsWriterInterface*>(new ijl::SettingsWriter());
     return swi->write(node);
 #else
 #   error Platform NOT supported
@@ -48,7 +46,7 @@ std::string SettingsAPI::writeConfigurationFile(SettingNodeInterface* node)
 }
     
 SettingNodeInterface* SettingsAPI::createNode() {
-    return (SettingNodeInterface*) new SettingNode();
+    return reinterpret_cast<SettingNodeInterface*> (new SettingNode());
 }
 
 }  // namespaces
