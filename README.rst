@@ -24,6 +24,14 @@ DOCUMENTATION
 
 The source code is fully documented.
 
+The library is designed to work with 3rd party library to bring support for:
+- read/write new formats (eg: XML).
+
+Library's default
+------------------
+
+- JSON format via http://sourceforge.net/projects/libjson/ and macro USE\_LIBRARY\_LIBJSON is defined.
+
 SOURCE
 ================================================================================
 

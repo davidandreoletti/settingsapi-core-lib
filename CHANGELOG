@@ -1,3 +1,13 @@
+Release 1.1.0f0:
+
+PSETLCOR-10: Use libjson by default regardless of the target platform
+
+PSETLCOR-8: Respected Google C++ Style Guide conventions
+
+PSETLCOR-6: Changed SettingNodeInterface::SettingNodeType::Type (class::struct::enum) into SettingNodeInterface::Type (class::enum) to improve code readability and add support for C++98 compliance
+
+PSETLCOR-7: Added/Modified inclusions of system headers and 3rd party libraries include header files to improve cross-platform compatibility + updated build scripts
+
 Release 1.0.0f0:
 
 PSETLCOR-4: Added SettingsAPI class (as public API) to read/write/create configuration files.

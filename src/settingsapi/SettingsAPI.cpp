@@ -9,14 +9,15 @@
 #include <stack>
 #include <string>
 
-#include "./targetconditionals/TargetConditionals.h"
 #include "./settingsapi/SettingsAPI.h"
 #include "./settingsapi/SettingsReaderInterface.h"
 #include "./settingsapi/SettingNodeInterface.h"
 
-#if defined(TC_PLATFORMS_PLATFORM_APPLE_IOS)
-#include "./settingsapi/impl/json/libjson0/SettingsReader.h"
-#include "./settingsapi/impl/json/libjson0/SettingsWriter.h"
+#define USE_LIBRARY_LIBJSON 1
+
+#if defined(USE_LIBRARY_LIBJSON)
+#   include "./settingsapi/impl/json/libjson0/SettingsReader.h"
+#   include "./settingsapi/impl/json/libjson0/SettingsWriter.h"
 #endif
 
 namespace settingsapi {
@@ -24,27 +25,28 @@ namespace settingsapi {
 SettingNodeInterface* SettingsAPI::readConfigurationFile(std::string configurationFileContent) {  // NOLINT(whitespace/line_length)
     SettingNodeInterface* n = NULL;
     SettingsReaderInterface* sni = NULL;
-#if defined(TC_PLATFORMS_PLATFORM_APPLE_IOS)
+#if defined(USE_LIBRARY_LIBJSON)
     namespace ijl = impl::json::libjson0;
     sni = reinterpret_cast<SettingsReaderInterface*>(new ijl::SettingsReader());
     n = reinterpret_cast<SettingNodeInterface*>(sni->parse(configurationFileContent));  // NOLINT(whitespace/line_length)
 #else
-#   error Platform NOT supported
+#   error No underlying library specified. Read documentation for further info.
 #endif
     delete sni;
     return n;
 }
 
 std::string SettingsAPI::writeConfigurationFile(SettingNodeInterface* node) {
+#if defined(USE_LIBRARY_LIBJSON)
     namespace ijl = impl::json::libjson0;
     SettingsWriterInterface* swi = NULL;
     swi = reinterpret_cast<SettingsWriterInterface*>(new ijl::SettingsWriter());
     return swi->write(node);
 #else
-#   error Platform NOT supported
+#   error No underlying library specified. Read documentation for further info.
 #endif
 }
-    
+
 SettingNodeInterface* SettingsAPI::createNode() {
     return reinterpret_cast<SettingNodeInterface*> (new SettingNode());
 }
