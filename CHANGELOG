@@ -1,5 +1,7 @@
 Release 1.3.0f0:
 
+PSETLCOR-15: [iOS] Fixed moving into libs/boostoniphone.git prior compiling the library
+
 PSETLCOR-14: [iOS] Fixed retrieving dependencies into libs directory
 
 PSETLCOR-13: Ignored libs directory

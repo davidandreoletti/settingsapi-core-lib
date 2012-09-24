@@ -34,16 +34,15 @@ dependencies-ios :
 	&& (cd $(LIBS_DIR) && (test -d boostoniphone-generic.git) || (git clone git://github.com/davidandreoletti/boostoniphone-generic.git boostoniphone-generic.git && cd boostoniphone-generic.git && git checkout tags/1.2.0f0))
 
 # Build Mandatory iOS dependencies
-build-ios-dependencies : 
-	cd $(LIBS_DIR); \
-	(cd sourceforge-libjson.git && make)
-	(cd boostoniphone-generic.git && export BOOST_LIBS=test && export BOOST_VERSION=1_50_0 && export IPHONE_SDKVERSION=5.1 && ./boost.sh)	
+build-dependencies-ios : 
+	(cd $(LIBS_DIR)/sourceforge-libjson.git && make)
+	(cd $(LIBS_DIR)/boostoniphone-generic.git && export BOOST_LIBS=test && export BOOST_VERSION=1_50_0 && export IPHONE_SDKVERSION=5.1 && ./boost.sh)	
 	
 # Clean iOS build
 clean-ios :
 	rm -rf $(PREFIX_DIR)
 
 # Build for iOS
-build-ios : clean-ios dependencies-ios build-ios-dependencies
+build-ios : clean-ios dependencies-ios build-dependencies-ios
 	xcrun --verbose xcodebuild -verbose -project ./proj.ios/settingsapi-core-lib/settingsapi-core-lib.xcodeproj -target settingsapi -configuration Release -sdk iphoneos -arch "armv6 armv7" clean install || false
 	([ "$(INTERNAL_PREFIX_DIR)" != "$(PREFIX)" ] && cp -v $(INTERNAL_PREFIX_DIR)/* $(PREFIX)/ ) || [ "$(INTERNAL_PREFIX_DIR)" == "$(PREFIX)" ]
