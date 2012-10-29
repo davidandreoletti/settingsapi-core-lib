@@ -32,6 +32,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		C700FFA8163E3E1000973D81 /* libjson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628321606A35600717E19 /* libjson.a */; };
 		C707D9AA15E912BE00CD889E /* SettingsReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A715E912BE00CD889E /* SettingsReader.cpp */; };
 		C707D9AB15E912BE00CD889E /* SettingNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A815E912BE00CD889E /* SettingNode.cpp */; };
 		C707D9AC15E912BE00CD889E /* SettingsAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A915E912BE00CD889E /* SettingsAPI.cpp */; };
@@ -44,7 +45,6 @@
 		C70CEDC515E7BF5100017A65 /* libsettingsapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
 		C70CEDCB15E7BF5100017A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70CEDC915E7BF5100017A65 /* InfoPlist.strings */; };
 		C7322DA415F6D4C600A4B066 /* SettingNodeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */; };
-		C74628331606A35600717E19 /* libjson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628321606A35600717E19 /* libjson.a */; };
 		C74628351606A37900717E19 /* libboost_unit_test_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628341606A37900717E19 /* libboost_unit_test_framework.a */; };
 		C7BB03A5160DECA8000AD3AA /* libsettingsapi.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
 		C7C1DB5815F1D90600C4D303 /* SettingsWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */; };
@@ -119,7 +119,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70CEDB015E7BF5100017A65 /* Foundation.framework in Frameworks */,
-				C74628331606A35600717E19 /* libjson.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +130,7 @@
 				C70CEDC215E7BF5100017A65 /* Foundation.framework in Frameworks */,
 				C70CEDC515E7BF5100017A65 /* libsettingsapi.a in Frameworks */,
 				C74628351606A37900717E19 /* libboost_unit_test_framework.a in Frameworks */,
+				C700FFA8163E3E1000973D81 /* libjson.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +667,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../libs/boostoniphone-generic.git/prefix/lib/",
+					"\"$(SRCROOT)/../../../libs/sourceforge-libjson.git/prefix/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
@@ -693,6 +694,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../libs/boostoniphone-generic.git/prefix/lib/",
+					"\"$(SRCROOT)/../../../libs/sourceforge-libjson.git/prefix/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;

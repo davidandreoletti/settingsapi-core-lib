@@ -1,3 +1,11 @@
+Release 1.3.1f0:
+
+PSETLCOR-18: [iOS] Prevented settingapi library from having its dependencies's object files included in final library
+
+PSETLCOR-16: Fixed markdown layout and minor typos
+
+PSETLCOR-17: [iOS] Fixed warning "JSON_DEBUG in release build " when building library in debug mode
+
 Release 1.3.0f0:
 
 PSETLCOR-15: [iOS] Fixed moving into libs/boostoniphone.git prior compiling the library

@@ -25,13 +25,23 @@ DOCUMENTATION
 
 The source code is fully documented.
 
-The library is designed to work with 3rd party library to bring support for:
-- read/write new formats (eg: XML).
+The library is designed to work with 3rd party library to bring support:
+
+- to read/write JSON formats.
 
 Library's default
 ------------------
 
-- JSON format via http://sourceforge.net/projects/libjson/ and macro USE\_LIBRARY\_LIBJSON is defined.
+By default, the library stores settings in JSON format via library libjson 
+(http://sourceforge.net/projects/libjson/).
+
+JSON format storage is enabled with:
+
+- preprocessor macro USE\_LIBRARY\_LIBJSON=1.
+- linking against libjson library. 
+
+NOTE: An iOS version of libjson can be found at
+sourceforge-libjson (https://github.com/davidandreoletti/sourceforge-libjson.git)
 
 SOURCE
 ================================================================================
