@@ -13,9 +13,8 @@
 #include "./settingsapi/SettingsReaderInterface.h"
 #include "./settingsapi/SettingNodeInterface.h"
 
-#define USE_LIBRARY_LIBJSON 1
-
 #if defined(USE_LIBRARY_LIBJSON)
+//  Use libjson library as implementation backend
 #   include "./settingsapi/impl/json/libjson0/SettingsReader.h"
 #   include "./settingsapi/impl/json/libjson0/SettingsWriter.h"
 #endif
