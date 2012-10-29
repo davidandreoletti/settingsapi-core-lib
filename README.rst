@@ -16,9 +16,9 @@ to to read/write configurations files
 INSTALLATION:
 ================================================================================
 
-cd proj
-# To build for iOS
-make build-ios
+    cd proj
+    # To build for iOS
+    make build-ios
 
 DOCUMENTATION
 ================================================================================
@@ -68,5 +68,5 @@ AUTHOR
 
 THANKS TO
 ================================================================================
-- Jonathan Wallace for producing such the libjson library which is used internaly
+- Jonathan Wallace for producing libjson library which is used internaly
   to read/write JSON based configuration files.
