@@ -30,8 +30,8 @@ usage :
 dependencies-ios : 
 	mkdir -p $(LIBS_DIR)
 	(cd $(LIBS_DIR) && (test -d target-conditionals.git) || (git clone git://github.com/davidandreoletti/target-conditionals.git target-conditionals.git && cd target-conditionals.git && git checkout tags/1.0.0f0)) \
-	&& (cd $(LIBS_DIR) && (test -d sourceforge-libjson.git) || (git clone git://github.com/davidandreoletti/sourceforge-libjson.git sourceforge-libjson.git && cd sourceforge-libjson.git && git checkout tags/1.0.0f0)) \
-	&& (cd $(LIBS_DIR) && (test -d boostoniphone-generic.git) || (git clone git://github.com/davidandreoletti/boostoniphone-generic.git boostoniphone-generic.git && cd boostoniphone-generic.git && git checkout tags/1.2.0f0))
+	&& (cd $(LIBS_DIR) && (test -d sourceforge-libjson.git) || (git clone git://github.com/davidandreoletti/sourceforge-libjson.git sourceforge-libjson.git && cd sourceforge-libjson.git && git checkout tags/1.0.2f0)) \
+	&& (cd $(LIBS_DIR) && (test -d boostoniphone-generic.git) || (git clone git://github.com/davidandreoletti/boostoniphone-generic.git boostoniphone-generic.git && cd boostoniphone-generic.git && git checkout tags/1.3.1f0))
 
 # Build Mandatory iOS dependencies
 build-dependencies-ios : 

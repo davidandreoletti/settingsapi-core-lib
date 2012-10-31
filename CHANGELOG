@@ -1,6 +1,8 @@
 Release 1.4.0f0:
 
-PSETLCOR-19 - Ignore prefix and proj/proj.ios/settingsapi-core-lib/build directories
+PSETLCOR-20: Fixed libjson/boost related static libraries not found
+
+PSETLCOR-19: Ignored prefix and proj/proj.ios/settingsapi-core-lib/build directories
 
 Release 1.3.1f0:
 
