@@ -1,2 +1,4 @@
 doc/developer/html
 libs
+prefix
+proj/proj.ios/settingsapi-core-lib/build
