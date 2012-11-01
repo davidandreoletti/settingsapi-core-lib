@@ -25,20 +25,19 @@ class SettingsAPI {
      * \param configurationFileContent File's content
      * \return Root SettingNodeInterface representing root of the entire tree node
      */
-    SettingNodeInterface* readConfigurationFile(std::string configurationFileContent);  // NOLINT(whitespace/line_length)
+    settingsapi::SettingNodeInterface* readConfigurationFile(std::string configurationFileContent);  // NOLINT(whitespace/line_length)
 
     /**
      * Writes configuration file
      * \param node Root node of the full tree node hierarchy
-     * \return String representation of the node tree hierarchy
+     * \return String representation of the full node tree hierarchy
+     *
+     * A note can be created with:
+     * \code[.cpp]
+     * SettingNodeInterface* node = reinterpret_cast<SettingNodeInterface*> (new settingsapi::SettingNode());
+     * \endcode
      */
-    std::string writeConfigurationFile(SettingNodeInterface* node);
-
-    /**
-     * Creates an empty SettingNodeInterface instance
-     * \return A new node instance
-     */
-    SettingNodeInterface* createNode();
+    std::string writeConfigurationFile(settingsapi::SettingNodeInterface* node);
 };
 
 }  // namespaces

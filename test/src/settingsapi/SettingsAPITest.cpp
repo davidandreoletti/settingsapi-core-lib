@@ -11,6 +11,7 @@
 #include <vector>
 #include "./settingsapi/SettingsAPI.h"
 #include "./settingsapi/SettingNodeInterface.h"
+#include "./settingsapi/SettingNode.h"
 #include "./settingsapi/SettingNodeConstants.h"
 
 namespace settingsapi {
@@ -102,9 +103,9 @@ BOOST_AUTO_TEST_CASE(readConfigurationFile) {
 }
 
 BOOST_AUTO_TEST_CASE(createNode) {
-    SettingNodeInterface* node = api->createNode();
+    SettingNodeInterface* node = reinterpret_cast<SettingNodeInterface*> (new settingsapi::SettingNode());  // NOLINT(whitespace/line_length)
     BOOST_REQUIRE(node != NULL);
-//    delete node;
+    delete node;
 }
 
 BOOST_AUTO_TEST_CASE(writeConfigurationFile) {

@@ -21,13 +21,16 @@
 
 namespace settingsapi {
 
-SettingNodeInterface* SettingsAPI::readConfigurationFile(std::string configurationFileContent) {  // NOLINT(whitespace/line_length)
-    SettingNodeInterface* n = NULL;
-    SettingsReaderInterface* sni = NULL;
+settingsapi::SettingNodeInterface* SettingsAPI::readConfigurationFile(std::string configurationFileContent) {  // NOLINT(whitespace/line_length)
+    typedef settingsapi::SettingsReaderInterface SRI;
+    typedef settingsapi::SettingNodeInterface SNI;
+    SNI* n = NULL;
+    SRI* sni = NULL;
 #if defined(USE_LIBRARY_LIBJSON)
     namespace ijl = impl::json::libjson0;
-    sni = reinterpret_cast<SettingsReaderInterface*>(new ijl::SettingsReader());
-    n = reinterpret_cast<SettingNodeInterface*>(sni->parse(configurationFileContent));  // NOLINT(whitespace/line_length)
+    typedef ijl::SettingsReader SR;
+    sni = reinterpret_cast<SRI*>(new SR());
+    n = reinterpret_cast<SNI*>(sni->parse(configurationFileContent));
 #else
 #   error No underlying library specified. Read documentation for further info.
 #endif
@@ -35,19 +38,18 @@ SettingNodeInterface* SettingsAPI::readConfigurationFile(std::string configurati
     return n;
 }
 
-std::string SettingsAPI::writeConfigurationFile(SettingNodeInterface* node) {
+std::string SettingsAPI::writeConfigurationFile(settingsapi::SettingNodeInterface* node) {  // NOLINT(whitespace/line_length)
+    typedef settingsapi::SettingsWriterInterface SWI;
+    typedef settingsapi::SettingNodeInterface SNI;
 #if defined(USE_LIBRARY_LIBJSON)
     namespace ijl = impl::json::libjson0;
-    SettingsWriterInterface* swi = NULL;
-    swi = reinterpret_cast<SettingsWriterInterface*>(new ijl::SettingsWriter());
+    typedef ijl::SettingsWriter SW;
+    SWI* swi = NULL;
+    swi = reinterpret_cast<SWI*>(new SW());
     return swi->write(node);
 #else
 #   error No underlying library specified. Read documentation for further info.
 #endif
-}
-
-SettingNodeInterface* SettingsAPI::createNode() {
-    return reinterpret_cast<SettingNodeInterface*> (new SettingNode());
 }
 
 }  // namespaces

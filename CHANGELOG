@@ -1,5 +1,7 @@
 Release 1.4.0f0:
 
+PSETLCOR-22: Removed SettingsAPI::createNode()
+
 PSETLCOR-21: Fixed SettingNode must public inherits from SettingNodeInterface
 
 PSETLCOR-20: Fixed libjson/boost related static libraries not found
