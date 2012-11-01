@@ -18,7 +18,7 @@ namespace settingsapi {
 /**
  *  SettingNode is a Node representing a setting
  */
-class SettingNode :  SettingNodeInterface {
+class SettingNode :  public SettingNodeInterface {
  public:
     /**
      * Default constructor

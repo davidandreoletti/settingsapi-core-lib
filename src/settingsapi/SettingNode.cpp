@@ -15,7 +15,7 @@
 
 namespace settingsapi {
 
-    SettingNode::SettingNode() {
+SettingNode::SettingNode() {
     this->type_ = SettingNodeInterface::TYPE_UNDEFINED;
     this->key_ = "";
     this->value_= "";
