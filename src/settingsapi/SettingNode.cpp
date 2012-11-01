@@ -11,7 +11,7 @@
 #include <climits>
 #include <vector>
 #include <string>
-#include "./settingsapi/SettingNode.h"
+#include "settingsapi/SettingNode.h"
 
 namespace settingsapi {
 

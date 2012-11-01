@@ -10,7 +10,7 @@
 #define TEST_INCLUDE_SETTINGSAPI_SETTINGNODECONSTANTS_H_
 
 #include <string>
-#include "./settingsapi/SettingNodeInterface.h"
+#include "settingsapi/SettingNodeInterface.h"
 
 namespace settingsapi {
 namespace test {

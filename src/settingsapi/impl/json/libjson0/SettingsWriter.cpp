@@ -6,7 +6,7 @@
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
-#include "./settingsapi/impl/json/libjson0/SettingsWriter.h"
+#include "settingsapi/impl/json/libjson0/SettingsWriter.h"
 #include <vector>
 #include <string>
 #include "libjson/libjson.h"

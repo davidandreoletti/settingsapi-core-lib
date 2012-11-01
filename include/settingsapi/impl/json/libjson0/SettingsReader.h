@@ -9,7 +9,7 @@
 #ifndef INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSREADER_H_
 #define INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSREADER_H_
 
-#include "./settingsapi/SettingsReaderInterface.h"
+#include "settingsapi/SettingsReaderInterface.h"
 
 #include <string>  // NOLINT(build/include_order)
 

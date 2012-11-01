@@ -9,9 +9,9 @@
 #include <stack>
 #include <string>
 
-#include "./settingsapi/SettingsAPI.h"
-#include "./settingsapi/SettingsReaderInterface.h"
-#include "./settingsapi/SettingNodeInterface.h"
+#include "settingsapi/SettingsAPI.h"
+#include "settingsapi/SettingsReaderInterface.h"
+#include "settingsapi/SettingNodeInterface.h"
 
 #if defined(USE_LIBRARY_LIBJSON)
 //  Use libjson library as implementation backend

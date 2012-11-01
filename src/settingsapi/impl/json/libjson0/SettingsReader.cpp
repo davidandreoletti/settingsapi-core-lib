@@ -8,7 +8,7 @@
 
 #include <cstring>  // for strcpy(...)
 #include <string>
-#include "./settingsapi/impl/json/libjson0/SettingsReader.h"
+#include "settingsapi/impl/json/libjson0/SettingsReader.h"
 #include "libjson/libjson.h"
 
 namespace settingsapi {

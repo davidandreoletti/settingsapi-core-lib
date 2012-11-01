@@ -9,9 +9,9 @@
 #include <boost/test/unit_test.hpp>
 #include <string>
 #include <vector>
-#include "./settingsapi/SettingNodeInterface.h"
-#include "./settingsapi/SettingNode.h"
-#include "./settingsapi/SettingNodeConstants.h"
+#include "settingsapi/SettingNodeInterface.h"
+#include "settingsapi/SettingNode.h"
+#include "settingsapi/SettingNodeConstants.h"
 
 namespace settingsapi {
 namespace test {

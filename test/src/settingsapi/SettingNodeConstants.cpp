@@ -7,8 +7,8 @@
 //
 
 #include <string>
-#include "./settingsapi/SettingNodeConstants.h"
-#include "./settingsapi/SettingNode.h"
+#include "settingsapi/SettingNodeConstants.h"
+#include "settingsapi/SettingNode.h"
 
 namespace settingsapi {
 namespace test {

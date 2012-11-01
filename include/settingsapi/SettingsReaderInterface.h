@@ -9,7 +9,7 @@
 #ifndef INCLUDE_SETTINGSAPI_SETTINGSREADERINTERFACE_H_
 #define INCLUDE_SETTINGSAPI_SETTINGSREADERINTERFACE_H_
 
-#include "./settingsapi/SettingNode.h"
+#include "settingsapi/SettingNode.h"
 
 #include <string>  // NOLINT(build/include_order)
 

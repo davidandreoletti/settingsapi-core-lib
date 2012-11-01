@@ -9,7 +9,7 @@
 #ifndef INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSWRITER_H_
 #define INCLUDE_SETTINGSAPI_IMPL_JSON_LIBJSON0_SETTINGSWRITER_H_
 
-#include "./settingsapi/SettingsWriterInterface.h"
+#include "settingsapi/SettingsWriterInterface.h"
 
 #include <string>  // NOLINT(build/include_order)
 
