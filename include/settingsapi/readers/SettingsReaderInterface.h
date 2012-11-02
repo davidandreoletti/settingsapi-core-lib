@@ -6,20 +6,23 @@
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
-#ifndef INCLUDE_SETTINGSAPI_SETTINGSREADERINTERFACE_H_
-#define INCLUDE_SETTINGSAPI_SETTINGSREADERINTERFACE_H_
+#ifndef INCLUDE_SETTINGSAPI_READERS_SETTINGSREADERINTERFACE_H_
+#define INCLUDE_SETTINGSAPI_READERS_SETTINGSREADERINTERFACE_H_
 
-#include "settingsapi/SettingNode.h"
+#include "settingsapi/nodes/SettingNode.h"
 
 #include <string>  // NOLINT(build/include_order)
 
 namespace settingsapi {
+namespace readers {
 
 /**
  *  Settings Reader interface
  */
 class SettingsReaderInterface {
  public:
+    typedef settingsapi::nodes::SettingNode SN;
+
     /**
      *  Destructor
      */
@@ -30,7 +33,7 @@ class SettingsReaderInterface {
      * \param content File content
      * \return Root node of the full node tree hierarchy. NULL if parsing failed
      */
-    virtual SettingNode* parse(std::string content) = 0;
+    virtual SN* parse(std::string content) = 0;
 };
 
 /**
@@ -39,6 +42,6 @@ class SettingsReaderInterface {
  */
 inline SettingsReaderInterface::~SettingsReaderInterface() {}
 
-}  // namespaces
+}}  // namespaces
 
-#endif  // INCLUDE_SETTINGSAPI_SETTINGSREADERINTERFACE_H_
+#endif  // INCLUDE_SETTINGSAPI_READERS_SETTINGSREADERINTERFACE_H_

@@ -8,28 +8,32 @@
 
 #include <cstring>  // for strcpy(...)
 #include <string>
-#include "settingsapi/impl/json/libjson0/SettingsReader.h"
+#include "settingsapi/readers/impl/json/libjson0/SettingsReader.h"
 #include "libjson/libjson.h"
 
 namespace settingsapi {
+namespace readers {
 namespace impl {
 namespace json {
 namespace libjson0 {
+
+typedef settingsapi::nodes::SettingNodeInterface SNI;
+typedef settingsapi::nodes::SettingNode SN;
 
 /**
  *  Identifies node type and returns its SettingNodeInterface::SettingNodeType equivalent
  *  \param n A libjson's node instance
  *\ \return Equivalent in SettingNodeInterface
  */
-settingsapi::SettingNodeInterface::Type identifyNodeType(JSONNODE* n) {
+SNI::Type identifyNodeType(JSONNODE* n) {
     char nodeType = json_type(n);
     if (nodeType == JSON_NODE) {
-        return SettingNodeInterface::TYPE_OBJECT;
+        return SNI::TYPE_OBJECT;
     }
     if (nodeType == JSON_ARRAY) {
-        return settingsapi::SettingNodeInterface::TYPE_ARRAY;
+        return SNI::TYPE_ARRAY;
     }
-    return settingsapi::SettingNodeInterface::TYPE_VALUE;
+    return SNI::TYPE_VALUE;
 }
 
 /**
@@ -37,10 +41,10 @@ settingsapi::SettingNodeInterface::Type identifyNodeType(JSONNODE* n) {
  * \param parentLjn Libjson node to parse. NULL if no parent
  * \return SettingNode equivalent to parentLjn including children
  */
-settingsapi::SettingNode* parseRecusively(JSONNODE* parentLjn) {
+SN* parseRecusively(JSONNODE* parentLjn) {
     if (parentLjn == NULL || parentLjn == JSON_NULL) { return NULL;}
 
-    settingsapi::SettingNode* parentNode = new settingsapi::SettingNode();
+    SN* parentNode = new SN();
     parentNode->setType(identifyNodeType(parentLjn));
     parentNode->setInternalNode(static_cast<void*>(parentLjn));
     parentNode->setKey(json_name(parentLjn));
@@ -55,8 +59,8 @@ settingsapi::SettingNode* parseRecusively(JSONNODE* parentLjn) {
         if (child == NULL || child == JSON_NULL) {
             return NULL;
         } else {
-            settingsapi::SettingNode* cn = parseRecusively(child);
-            parentNode->addChildNode(reinterpret_cast<SettingNodeInterface*>(cn));  // NOLINT(whitespace/line_length)
+            SN* cn = parseRecusively(child);
+            parentNode->addChildNode(reinterpret_cast<SNI*>(cn));
             ++it;
         }
     }
@@ -65,7 +69,7 @@ settingsapi::SettingNode* parseRecusively(JSONNODE* parentLjn) {
 
 SettingsReader::~SettingsReader() {}
 
-settingsapi::SettingNode* SettingsReader::parse(std::string content) {
+SN* SettingsReader::parse(std::string content) {
     char* contentAsCString = new char[content.size()+1];
     // Cannot use snprintf (defined from C++11)
     strcpy(contentAsCString, content.c_str());  // NOLINT(runtime/printf)
@@ -74,4 +78,4 @@ settingsapi::SettingNode* SettingsReader::parse(std::string content) {
     return parseRecusively(n);
 }
 
-}}}}  // namespaces
+}}}}}  // namespaces

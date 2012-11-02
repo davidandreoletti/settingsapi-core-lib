@@ -10,25 +10,30 @@
 #include <string>
 
 #include "settingsapi/SettingsAPI.h"
-#include "settingsapi/SettingsReaderInterface.h"
-#include "settingsapi/SettingNodeInterface.h"
+#include "settingsapi/readers/SettingsReaderInterface.h"
+#include "settingsapi/nodes/SettingNodeInterface.h"
 
 #if defined(USE_LIBRARY_LIBJSON)
 //  Use libjson library as implementation backend
-#   include "./settingsapi/impl/json/libjson0/SettingsReader.h"
-#   include "./settingsapi/impl/json/libjson0/SettingsWriter.h"
+#   include "./settingsapi/readers//impl/json/libjson0/SettingsReader.h"
+#   include "./settingsapi/writers/impl/json/libjson0/SettingsWriter.h"
 #endif
 
 namespace settingsapi {
 
-settingsapi::SettingNodeInterface* SettingsAPI::readConfigurationFile(std::string configurationFileContent) {  // NOLINT(whitespace/line_length)
-    typedef settingsapi::SettingsReaderInterface SRI;
-    typedef settingsapi::SettingNodeInterface SNI;
+typedef settingsapi::readers::SettingsReaderInterface SRI;
+typedef settingsapi::nodes::SettingNodeInterface SNI;
+typedef settingsapi::writers::SettingsWriterInterface SWI;
+typedef settingsapi::nodes::SettingNodeInterface SNI;
+#if defined(USE_LIBRARY_LIBJSON)
+typedef settingsapi::readers::impl::json::libjson0::SettingsReader SR;
+typedef settingsapi::writers::impl::json::libjson0::SettingsWriter SW;
+#endif
+
+SNI* SettingsAPI::readConfigurationFile(std::string configurationFileContent) {
     SNI* n = NULL;
     SRI* sni = NULL;
 #if defined(USE_LIBRARY_LIBJSON)
-    namespace ijl = impl::json::libjson0;
-    typedef ijl::SettingsReader SR;
     sni = reinterpret_cast<SRI*>(new SR());
     n = reinterpret_cast<SNI*>(sni->parse(configurationFileContent));
 #else
@@ -38,12 +43,8 @@ settingsapi::SettingNodeInterface* SettingsAPI::readConfigurationFile(std::strin
     return n;
 }
 
-std::string SettingsAPI::writeConfigurationFile(settingsapi::SettingNodeInterface* node) {  // NOLINT(whitespace/line_length)
-    typedef settingsapi::SettingsWriterInterface SWI;
-    typedef settingsapi::SettingNodeInterface SNI;
+std::string SettingsAPI::writeConfigurationFile(SNI* node) {
 #if defined(USE_LIBRARY_LIBJSON)
-    namespace ijl = impl::json::libjson0;
-    typedef ijl::SettingsWriter SW;
     SWI* swi = NULL;
     swi = reinterpret_cast<SWI*>(new SW());
     return swi->write(node);

@@ -9,17 +9,18 @@
 #include <boost/test/unit_test.hpp>
 #include <string>
 #include <vector>
-#include "settingsapi/SettingNodeInterface.h"
-#include "settingsapi/SettingNode.h"
-#include "settingsapi/SettingNodeConstants.h"
+#include "settingsapi/nodes/SettingNodeInterface.h"
+#include "settingsapi/nodes/SettingNode.h"
+#include "settingsapi/nodes/SettingNodeConstants.h"
 
 namespace settingsapi {
+namespace nodes {
 namespace test {
 
 struct SettingNodeFixture {
-    settingsapi::SettingNodeInterface* node;
+    settingsapi::nodes::SettingNodeInterface* node;
     SettingNodeFixture() {
-        node = reinterpret_cast<SettingNodeInterface*>(new settingsapi::SettingNode());  // NOLINT(whitespace/line_length)
+        node = reinterpret_cast<nodes::SettingNodeInterface*>(new settingsapi::nodes::SettingNode());  // NOLINT(whitespace/line_length)
     }
     ~SettingNodeFixture() {
         delete node;
@@ -41,24 +42,24 @@ BOOST_AUTO_TEST_CASE(setKey) {
 BOOST_AUTO_TEST_CASE(readInt32) {
     node->setType(SettingNodeConstants::kMyNode0Type);
     node->setValue("2147483647");  // 2^31 - 1 = 2147483647
-    settingsapi::SettingNodeInterface::StringToInt32ConversionStatus cs;
+    settingsapi::nodes::SettingNodeInterface::StringToInt32ConversionStatus cs;
     int value = node->readInt32(cs);
     BOOST_REQUIRE_EQUAL(value, 2147483647);
-    BOOST_REQUIRE_EQUAL(cs, settingsapi::SettingNodeInterface::STRINGTOINT32CONVERTIONSTATUS_SUCCESS);  // NOLINT(whitespace/line_length)
+    BOOST_REQUIRE_EQUAL(cs, settingsapi::nodes::SettingNodeInterface::STRINGTOINT32CONVERTIONSTATUS_SUCCESS);  // NOLINT(whitespace/line_length)
 
     node->setValue("2147483648");  // 2^31 = 2147483648
     value = node->readInt32(cs);
     BOOST_REQUIRE_NE(value, 2147483648);
-    BOOST_REQUIRE_EQUAL(cs, settingsapi::SettingNodeInterface::STRINGTOINT32CONVERTIONSTATUS_OVERFLOW);  // NOLINT(whitespace/line_length)
+    BOOST_REQUIRE_EQUAL(cs, settingsapi::nodes::SettingNodeInterface::STRINGTOINT32CONVERTIONSTATUS_OVERFLOW);  // NOLINT(whitespace/line_length)
 
     node->setValue("-2147483649");  // -2^31+1 = -2147483649
     value = node->readInt32(cs);
     BOOST_REQUIRE_NE(value, -2147483649);
-    BOOST_REQUIRE_EQUAL(cs, settingsapi::SettingNodeInterface::STRINGTOINT32CONVERTIONSTATUS_UNDERFLOW);  // NOLINT(whitespace/line_length)
+    BOOST_REQUIRE_EQUAL(cs, settingsapi::nodes::SettingNodeInterface::STRINGTOINT32CONVERTIONSTATUS_UNDERFLOW);  // NOLINT(whitespace/line_length)
 
     node->setValue("");
     value = node->readInt32(cs);
-    BOOST_REQUIRE_EQUAL(cs, settingsapi::SettingNodeInterface::STRINGTOINT32CONVERTIONSTATUS_INCONVERTIBLE);  // NOLINT(whitespace/line_length)
+    BOOST_REQUIRE_EQUAL(cs, settingsapi::nodes::SettingNodeInterface::STRINGTOINT32CONVERTIONSTATUS_INCONVERTIBLE);  // NOLINT(whitespace/line_length)
 }
 
 
@@ -72,19 +73,19 @@ BOOST_AUTO_TEST_CASE(setValue) {
 }
 
 BOOST_AUTO_TEST_CASE(equalsNode) {
-    SettingNodeInterface* nodeA = reinterpret_cast<SettingNodeInterface*>(new SettingNode());  // NOLINT(whitespace/line_length)
-    nodeA->setType(SettingNodeInterface::TYPE_OBJECT);
+    nodes::SettingNodeInterface* nodeA = reinterpret_cast<nodes::SettingNodeInterface*>(new nodes::SettingNode());  // NOLINT(whitespace/line_length)
+    nodeA->setType(nodes::SettingNodeInterface::TYPE_OBJECT);
     nodeA->setKey(SettingNodeConstants::kMyNode0Key);
     nodeA->setValue(SettingNodeConstants::kMyNode0Value);
 
-    SettingNodeInterface* nodeB = reinterpret_cast<SettingNodeInterface*>(new SettingNode());  // NOLINT(whitespace/line_length)
-    nodeB->setType(SettingNodeInterface::TYPE_OBJECT);
+    nodes::SettingNodeInterface* nodeB = reinterpret_cast<nodes::SettingNodeInterface*>(new nodes::SettingNode());  // NOLINT(whitespace/line_length)
+    nodeB->setType(nodes::SettingNodeInterface::TYPE_OBJECT);
     nodeB->setKey(SettingNodeConstants::kMyNode0Key);
     nodeB->setValue(SettingNodeConstants::kMyNode0Value);
 
     BOOST_REQUIRE(nodeA->equalsNode(*nodeB));
 
-    SettingNodeInterface* nodeC = reinterpret_cast<SettingNodeInterface*>(new SettingNode());  // NOLINT(whitespace/line_length)
+    nodes::SettingNodeInterface* nodeC = reinterpret_cast<nodes::SettingNodeInterface*>(new nodes::SettingNode());  // NOLINT(whitespace/line_length)
     BOOST_REQUIRE(!(nodeA->equalsNode(*nodeC)));
     nodeC->setType(SettingNodeConstants::kMyNode0Type);
     BOOST_REQUIRE(!(nodeA->equalsNode(*nodeC)));
@@ -99,12 +100,12 @@ BOOST_AUTO_TEST_CASE(equalsNode) {
 }
 
 BOOST_AUTO_TEST_CASE(equalsTreeNode) {
-    SettingNodeInterface* rootNodeA = SettingNodeConstants::createNewNotEmptyObjectNode();  // NOLINT(whitespace/line_length)
-    SettingNodeInterface* rootNodeB = SettingNodeConstants::createNewNotEmptyObjectNode();  // NOLINT(whitespace/line_length)
+    nodes::SettingNodeInterface* rootNodeA = SettingNodeConstants::createNewNotEmptyObjectNode();  // NOLINT(whitespace/line_length)
+    nodes::SettingNodeInterface* rootNodeB = SettingNodeConstants::createNewNotEmptyObjectNode();  // NOLINT(whitespace/line_length)
 
     BOOST_REQUIRE(rootNodeA->equalsTreeNode(*rootNodeB));
 
-    SettingNodeInterface* nodeC = reinterpret_cast<SettingNodeInterface*> (new SettingNode());  // NOLINT(whitespace/line_length)
+    nodes::SettingNodeInterface* nodeC = reinterpret_cast<nodes::SettingNodeInterface*> (new nodes::SettingNode());  // NOLINT(whitespace/line_length)
     rootNodeB->addChildNode(nodeC);
 
     BOOST_REQUIRE(!(rootNodeA->equalsTreeNode(*rootNodeB)));
@@ -115,4 +116,4 @@ BOOST_AUTO_TEST_CASE(equalsTreeNode) {
 
 BOOST_AUTO_TEST_SUITE_END()
 
-}}  // namespaces
+}}}  // namespaces

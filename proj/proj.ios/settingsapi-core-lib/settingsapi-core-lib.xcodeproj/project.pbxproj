@@ -33,22 +33,22 @@
 
 /* Begin PBXBuildFile section */
 		C700FFA8163E3E1000973D81 /* libjson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628321606A35600717E19 /* libjson.a */; };
-		C707D9AA15E912BE00CD889E /* SettingsReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A715E912BE00CD889E /* SettingsReader.cpp */; };
-		C707D9AB15E912BE00CD889E /* SettingNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A815E912BE00CD889E /* SettingNode.cpp */; };
-		C707D9AC15E912BE00CD889E /* SettingsAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9A915E912BE00CD889E /* SettingsAPI.cpp */; };
-		C707D9B515E912D300CD889E /* SettingsAPITest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9B315E912D300CD889E /* SettingsAPITest.cpp */; };
-		C707D9B615E912D300CD889E /* TestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C707D9B415E912D300CD889E /* TestRunner.cpp */; };
 		C707D9E915E9A88D00CD889E /* settingsapiTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = C707D9E815E9A88D00CD889E /* settingsapiTests.mm */; };
 		C70CEDB015E7BF5100017A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAF15E7BF5100017A65 /* Foundation.framework */; };
 		C70CEDBF15E7BF5100017A65 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDBE15E7BF5100017A65 /* SenTestingKit.framework */; };
 		C70CEDC215E7BF5100017A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAF15E7BF5100017A65 /* Foundation.framework */; };
 		C70CEDC515E7BF5100017A65 /* libsettingsapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
 		C70CEDCB15E7BF5100017A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70CEDC915E7BF5100017A65 /* InfoPlist.strings */; };
-		C7322DA415F6D4C600A4B066 /* SettingNodeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */; };
 		C74628351606A37900717E19 /* libboost_unit_test_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628341606A37900717E19 /* libboost_unit_test_framework.a */; };
 		C7BB03A5160DECA8000AD3AA /* libsettingsapi.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
-		C7C1DB5815F1D90600C4D303 /* SettingsWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */; };
-		C7C1DB5E15F4327000C4D303 /* SettingNodeConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7C1DB5D15F4327000C4D303 /* SettingNodeConstants.cpp */; };
+		C7F419551642BF6C00431FDD /* SettingNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F419491642BF6C00431FDD /* SettingNode.cpp */; };
+		C7F419561642BF6C00431FDD /* SettingsReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F4194E1642BF6C00431FDD /* SettingsReader.cpp */; };
+		C7F419571642BF6C00431FDD /* SettingsAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F4194F1642BF6C00431FDD /* SettingsAPI.cpp */; };
+		C7F419581642BF6C00431FDD /* SettingsWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F419541642BF6C00431FDD /* SettingsWriter.cpp */; };
+		C7F419651643409000431FDD /* SettingNodeConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F419611643409000431FDD /* SettingNodeConstants.cpp */; };
+		C7F419661643409000431FDD /* SettingNodeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F419621643409000431FDD /* SettingNodeTest.cpp */; };
+		C7F419671643409000431FDD /* SettingsAPITest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F419631643409000431FDD /* SettingsAPITest.cpp */; };
+		C7F419681643409000431FDD /* TestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F419641643409000431FDD /* TestRunner.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,19 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C707D9A715E912BE00CD889E /* SettingsReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsReader.cpp; sourceTree = "<group>"; };
-		C707D9A815E912BE00CD889E /* SettingNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNode.cpp; sourceTree = "<group>"; };
-		C707D9A915E912BE00CD889E /* SettingsAPI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsAPI.cpp; sourceTree = "<group>"; };
-		C707D9B015E912D300CD889E /* TestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRunner.h; sourceTree = "<group>"; };
-		C707D9B315E912D300CD889E /* SettingsAPITest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsAPITest.cpp; sourceTree = "<group>"; };
-		C707D9B415E912D300CD889E /* TestRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRunner.cpp; sourceTree = "<group>"; };
 		C707D9D815E99D7700CD889E /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		C707D9DE15E99D7700CD889E /* SettingsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsReader.h; sourceTree = "<group>"; };
-		C707D9DF15E99D7700CD889E /* SettingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNode.h; sourceTree = "<group>"; };
-		C707D9E015E99D7700CD889E /* SettingNodeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNodeInterface.h; sourceTree = "<group>"; };
-		C707D9E115E99D7700CD889E /* SettingsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsAPI.h; sourceTree = "<group>"; };
-		C707D9E215E99D7700CD889E /* SettingsReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsReaderInterface.h; sourceTree = "<group>"; };
-		C707D9E315E99D7700CD889E /* SettingsWriterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWriterInterface.h; sourceTree = "<group>"; };
 		C707D9E715E9A88D00CD889E /* settingsapiTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsapiTests.h; sourceTree = "<group>"; };
 		C707D9E815E9A88D00CD889E /* settingsapiTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = settingsapiTests.mm; sourceTree = "<group>"; };
 		C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsettingsapi.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,11 +94,23 @@
 		C70CEDCA15E7BF5100017A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C74628321606A35600717E19 /* libjson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjson.a; path = "../../../libs/sourceforge-libjson.git/prefix/lib/libjson.a"; sourceTree = "<group>"; };
 		C74628341606A37900717E19 /* libboost_unit_test_framework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_unit_test_framework.a; path = "../../../libs/boostoniphone-generic.git/prefix/lib/libboost_unit_test_framework.a"; sourceTree = "<group>"; };
-		C7C1DB5415F1D8CC00C4D303 /* SettingsWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWriter.h; sourceTree = "<group>"; };
-		C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsWriter.cpp; sourceTree = "<group>"; };
-		C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNodeTest.cpp; sourceTree = "<group>"; };
-		C7C1DB5C15F318B800C4D303 /* SettingNodeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNodeConstants.h; sourceTree = "<group>"; };
-		C7C1DB5D15F4327000C4D303 /* SettingNodeConstants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNodeConstants.cpp; sourceTree = "<group>"; };
+		C7F419381642BE6800431FDD /* SettingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNode.h; sourceTree = "<group>"; };
+		C7F419391642BE6800431FDD /* SettingNodeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNodeInterface.h; sourceTree = "<group>"; };
+		C7F4193E1642BE6800431FDD /* SettingsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsReader.h; sourceTree = "<group>"; };
+		C7F4193F1642BE6800431FDD /* SettingsReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsReaderInterface.h; sourceTree = "<group>"; };
+		C7F419401642BE6800431FDD /* SettingsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsAPI.h; sourceTree = "<group>"; };
+		C7F419451642BE6800431FDD /* SettingsWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWriter.h; sourceTree = "<group>"; };
+		C7F419461642BE6800431FDD /* SettingsWriterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWriterInterface.h; sourceTree = "<group>"; };
+		C7F419491642BF6C00431FDD /* SettingNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNode.cpp; sourceTree = "<group>"; };
+		C7F4194E1642BF6C00431FDD /* SettingsReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsReader.cpp; sourceTree = "<group>"; };
+		C7F4194F1642BF6C00431FDD /* SettingsAPI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsAPI.cpp; sourceTree = "<group>"; };
+		C7F419541642BF6C00431FDD /* SettingsWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsWriter.cpp; sourceTree = "<group>"; };
+		C7F4195C1643409000431FDD /* SettingNodeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNodeConstants.h; sourceTree = "<group>"; };
+		C7F4195D1643409000431FDD /* TestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRunner.h; sourceTree = "<group>"; };
+		C7F419611643409000431FDD /* SettingNodeConstants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNodeConstants.cpp; sourceTree = "<group>"; };
+		C7F419621643409000431FDD /* SettingNodeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingNodeTest.cpp; sourceTree = "<group>"; };
+		C7F419631643409000431FDD /* SettingsAPITest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingsAPITest.cpp; sourceTree = "<group>"; };
+		C7F419641643409000431FDD /* TestRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRunner.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,131 +140,30 @@
 		C707D9A215E912BE00CD889E /* src */ = {
 			isa = PBXGroup;
 			children = (
-				C707D9A315E912BE00CD889E /* settingsapi */,
+				C7F419471642BF6C00431FDD /* settingsapi */,
 			);
 			name = src;
 			path = ../../../src;
 			sourceTree = "<group>";
 		};
-		C707D9A315E912BE00CD889E /* settingsapi */ = {
-			isa = PBXGroup;
-			children = (
-				C707D9A415E912BE00CD889E /* impl */,
-				C707D9A815E912BE00CD889E /* SettingNode.cpp */,
-				C707D9A915E912BE00CD889E /* SettingsAPI.cpp */,
-			);
-			path = settingsapi;
-			sourceTree = "<group>";
-		};
-		C707D9A415E912BE00CD889E /* impl */ = {
-			isa = PBXGroup;
-			children = (
-				C707D9A515E912BE00CD889E /* json */,
-			);
-			path = impl;
-			sourceTree = "<group>";
-		};
-		C707D9A515E912BE00CD889E /* json */ = {
-			isa = PBXGroup;
-			children = (
-				C707D9A615E912BE00CD889E /* libjson0 */,
-			);
-			path = json;
-			sourceTree = "<group>";
-		};
-		C707D9A615E912BE00CD889E /* libjson0 */ = {
-			isa = PBXGroup;
-			children = (
-				C7C1DB5715F1D90600C4D303 /* SettingsWriter.cpp */,
-				C707D9A715E912BE00CD889E /* SettingsReader.cpp */,
-			);
-			path = libjson0;
-			sourceTree = "<group>";
-		};
 		C707D9AD15E912D300CD889E /* test */ = {
 			isa = PBXGroup;
 			children = (
-				C707D9AE15E912D300CD889E /* include */,
-				C707D9B115E912D300CD889E /* src */,
+				C7F419591643409000431FDD /* include */,
+				C7F4195E1643409000431FDD /* src */,
 			);
 			name = test;
 			path = ../../../test;
 			sourceTree = "<group>";
 		};
-		C707D9AE15E912D300CD889E /* include */ = {
-			isa = PBXGroup;
-			children = (
-				C7C1DB5B15F318B800C4D303 /* settingsapi */,
-				C707D9B015E912D300CD889E /* TestRunner.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		C707D9B115E912D300CD889E /* src */ = {
-			isa = PBXGroup;
-			children = (
-				C707D9B215E912D300CD889E /* settingsapi */,
-				C707D9B415E912D300CD889E /* TestRunner.cpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		C707D9B215E912D300CD889E /* settingsapi */ = {
-			isa = PBXGroup;
-			children = (
-				C7C1DB5D15F4327000C4D303 /* SettingNodeConstants.cpp */,
-				C7C1DB5915F2700200C4D303 /* SettingNodeTest.cpp */,
-				C707D9B315E912D300CD889E /* SettingsAPITest.cpp */,
-			);
-			path = settingsapi;
-			sourceTree = "<group>";
-		};
 		C707D9D715E99D7700CD889E /* include */ = {
 			isa = PBXGroup;
 			children = (
+				C7F419361642BE6800431FDD /* settingsapi */,
 				C707D9D815E99D7700CD889E /* README */,
-				C707D9D915E99D7700CD889E /* settingsapi */,
 			);
 			name = include;
 			path = ../../../include;
-			sourceTree = "<group>";
-		};
-		C707D9D915E99D7700CD889E /* settingsapi */ = {
-			isa = PBXGroup;
-			children = (
-				C707D9DA15E99D7700CD889E /* impl */,
-				C707D9DF15E99D7700CD889E /* SettingNode.h */,
-				C707D9E015E99D7700CD889E /* SettingNodeInterface.h */,
-				C707D9E115E99D7700CD889E /* SettingsAPI.h */,
-				C707D9E215E99D7700CD889E /* SettingsReaderInterface.h */,
-				C707D9E315E99D7700CD889E /* SettingsWriterInterface.h */,
-			);
-			path = settingsapi;
-			sourceTree = "<group>";
-		};
-		C707D9DA15E99D7700CD889E /* impl */ = {
-			isa = PBXGroup;
-			children = (
-				C707D9DB15E99D7700CD889E /* json */,
-			);
-			path = impl;
-			sourceTree = "<group>";
-		};
-		C707D9DB15E99D7700CD889E /* json */ = {
-			isa = PBXGroup;
-			children = (
-				C707D9DC15E99D7700CD889E /* libjson0 */,
-			);
-			path = json;
-			sourceTree = "<group>";
-		};
-		C707D9DC15E99D7700CD889E /* libjson0 */ = {
-			isa = PBXGroup;
-			children = (
-				C7C1DB5415F1D8CC00C4D303 /* SettingsWriter.h */,
-				C707D9DE15E99D7700CD889E /* SettingsReader.h */,
-			);
-			path = libjson0;
 			sourceTree = "<group>";
 		};
 		C70CEDA115E7BF5100017A65 = {
@@ -337,12 +236,225 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C7C1DB5B15F318B800C4D303 /* settingsapi */ = {
+		C7F419361642BE6800431FDD /* settingsapi */ = {
 			isa = PBXGroup;
 			children = (
-				C7C1DB5C15F318B800C4D303 /* SettingNodeConstants.h */,
+				C7F419371642BE6800431FDD /* nodes */,
+				C7F4193A1642BE6800431FDD /* readers */,
+				C7F419401642BE6800431FDD /* SettingsAPI.h */,
+				C7F419411642BE6800431FDD /* writers */,
 			);
 			path = settingsapi;
+			sourceTree = "<group>";
+		};
+		C7F419371642BE6800431FDD /* nodes */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419381642BE6800431FDD /* SettingNode.h */,
+				C7F419391642BE6800431FDD /* SettingNodeInterface.h */,
+			);
+			path = nodes;
+			sourceTree = "<group>";
+		};
+		C7F4193A1642BE6800431FDD /* readers */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4193B1642BE6800431FDD /* impl */,
+				C7F4193F1642BE6800431FDD /* SettingsReaderInterface.h */,
+			);
+			path = readers;
+			sourceTree = "<group>";
+		};
+		C7F4193B1642BE6800431FDD /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4193C1642BE6800431FDD /* json */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		C7F4193C1642BE6800431FDD /* json */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4193D1642BE6800431FDD /* libjson0 */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		C7F4193D1642BE6800431FDD /* libjson0 */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4193E1642BE6800431FDD /* SettingsReader.h */,
+			);
+			path = libjson0;
+			sourceTree = "<group>";
+		};
+		C7F419411642BE6800431FDD /* writers */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419421642BE6800431FDD /* impl */,
+				C7F419461642BE6800431FDD /* SettingsWriterInterface.h */,
+			);
+			path = writers;
+			sourceTree = "<group>";
+		};
+		C7F419421642BE6800431FDD /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419431642BE6800431FDD /* json */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		C7F419431642BE6800431FDD /* json */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419441642BE6800431FDD /* libjson0 */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		C7F419441642BE6800431FDD /* libjson0 */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419451642BE6800431FDD /* SettingsWriter.h */,
+			);
+			path = libjson0;
+			sourceTree = "<group>";
+		};
+		C7F419471642BF6C00431FDD /* settingsapi */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419481642BF6C00431FDD /* nodes */,
+				C7F4194A1642BF6C00431FDD /* readers */,
+				C7F4194F1642BF6C00431FDD /* SettingsAPI.cpp */,
+				C7F419501642BF6C00431FDD /* writers */,
+			);
+			path = settingsapi;
+			sourceTree = "<group>";
+		};
+		C7F419481642BF6C00431FDD /* nodes */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419491642BF6C00431FDD /* SettingNode.cpp */,
+			);
+			path = nodes;
+			sourceTree = "<group>";
+		};
+		C7F4194A1642BF6C00431FDD /* readers */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4194B1642BF6C00431FDD /* impl */,
+			);
+			path = readers;
+			sourceTree = "<group>";
+		};
+		C7F4194B1642BF6C00431FDD /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4194C1642BF6C00431FDD /* json */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		C7F4194C1642BF6C00431FDD /* json */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4194D1642BF6C00431FDD /* libjson0 */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		C7F4194D1642BF6C00431FDD /* libjson0 */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4194E1642BF6C00431FDD /* SettingsReader.cpp */,
+			);
+			path = libjson0;
+			sourceTree = "<group>";
+		};
+		C7F419501642BF6C00431FDD /* writers */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419511642BF6C00431FDD /* impl */,
+			);
+			path = writers;
+			sourceTree = "<group>";
+		};
+		C7F419511642BF6C00431FDD /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419521642BF6C00431FDD /* json */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		C7F419521642BF6C00431FDD /* json */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419531642BF6C00431FDD /* libjson0 */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		C7F419531642BF6C00431FDD /* libjson0 */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419541642BF6C00431FDD /* SettingsWriter.cpp */,
+			);
+			path = libjson0;
+			sourceTree = "<group>";
+		};
+		C7F419591643409000431FDD /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4195A1643409000431FDD /* settingsapi */,
+				C7F4195D1643409000431FDD /* TestRunner.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C7F4195A1643409000431FDD /* settingsapi */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4195B1643409000431FDD /* nodes */,
+			);
+			path = settingsapi;
+			sourceTree = "<group>";
+		};
+		C7F4195B1643409000431FDD /* nodes */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4195C1643409000431FDD /* SettingNodeConstants.h */,
+			);
+			path = nodes;
+			sourceTree = "<group>";
+		};
+		C7F4195E1643409000431FDD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4195F1643409000431FDD /* settingsapi */,
+				C7F419641643409000431FDD /* TestRunner.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C7F4195F1643409000431FDD /* settingsapi */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419601643409000431FDD /* nodes */,
+				C7F419631643409000431FDD /* SettingsAPITest.cpp */,
+			);
+			path = settingsapi;
+			sourceTree = "<group>";
+		};
+		C7F419601643409000431FDD /* nodes */ = {
+			isa = PBXGroup;
+			children = (
+				C7F419611643409000431FDD /* SettingNodeConstants.cpp */,
+				C7F419621643409000431FDD /* SettingNodeTest.cpp */,
+			);
+			path = nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,10 +585,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C707D9AA15E912BE00CD889E /* SettingsReader.cpp in Sources */,
-				C707D9AB15E912BE00CD889E /* SettingNode.cpp in Sources */,
-				C707D9AC15E912BE00CD889E /* SettingsAPI.cpp in Sources */,
-				C7C1DB5815F1D90600C4D303 /* SettingsWriter.cpp in Sources */,
+				C7F419551642BF6C00431FDD /* SettingNode.cpp in Sources */,
+				C7F419561642BF6C00431FDD /* SettingsReader.cpp in Sources */,
+				C7F419571642BF6C00431FDD /* SettingsAPI.cpp in Sources */,
+				C7F419581642BF6C00431FDD /* SettingsWriter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,11 +596,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C707D9B515E912D300CD889E /* SettingsAPITest.cpp in Sources */,
-				C707D9B615E912D300CD889E /* TestRunner.cpp in Sources */,
-				C7322DA415F6D4C600A4B066 /* SettingNodeTest.cpp in Sources */,
 				C707D9E915E9A88D00CD889E /* settingsapiTests.mm in Sources */,
-				C7C1DB5E15F4327000C4D303 /* SettingNodeConstants.cpp in Sources */,
+				C7F419651643409000431FDD /* SettingNodeConstants.cpp in Sources */,
+				C7F419661643409000431FDD /* SettingNodeTest.cpp in Sources */,
+				C7F419671643409000431FDD /* SettingsAPITest.cpp in Sources */,
+				C7F419681643409000431FDD /* TestRunner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

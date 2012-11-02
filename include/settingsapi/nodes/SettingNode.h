@@ -6,20 +6,23 @@
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
-#ifndef INCLUDE_SETTINGSAPI_SETTINGNODE_H_
-#define INCLUDE_SETTINGSAPI_SETTINGNODE_H_
+#ifndef INCLUDE_SETTINGSAPI_NODES_SETTINGNODE_H_
+#define INCLUDE_SETTINGSAPI_NODES_SETTINGNODE_H_
 
 #include <string>
 #include <vector>
-#include "settingsapi/SettingNodeInterface.h"
+#include "settingsapi/nodes/SettingNodeInterface.h"
 
 namespace settingsapi {
+namespace nodes {
 
 /**
  *  SettingNode is a Node representing a setting
  */
-class SettingNode :  public SettingNodeInterface {
+class SettingNode :  public settingsapi::nodes::SettingNodeInterface {
  public:
+    typedef settingsapi::nodes::SettingNodeInterface SNI;
+
     /**
      * Default constructor
      */
@@ -27,20 +30,20 @@ class SettingNode :  public SettingNodeInterface {
 
     // Inherited from SettingNodeInterface
     virtual ~SettingNode();
-    virtual SettingNodeInterface::Type getType() const;
-    virtual void setType(SettingNodeInterface::Type type);
+    virtual SNI::Type getType() const;
+    virtual void setType(SNI::Type type);
     virtual std::string getKey() const;
     virtual void setKey(std::string key);
     virtual std::string readString() const;
     virtual int readInt32(StringToInt32ConversionStatus& r) const;  // NOLINT(*) whitespace/line_length,runtime/references
     virtual void setValue(std::string value);
     virtual bool empty();
-    virtual SettingNodeInterface* getParentNode();
-    virtual void setParentNode(SettingNodeInterface* node);
-    virtual void addChildNode(SettingNodeInterface* node);
+    virtual SNI* getParentNode();
+    virtual void setParentNode(SNI* node);
+    virtual void addChildNode(SNI* node);
     virtual std::vector<SettingNodeInterface*> getChildren() const;
-    virtual bool equalsTreeNode(const SettingNodeInterface& node) const;
-    virtual bool equalsNode(const SettingNodeInterface& node) const;
+    virtual bool equalsTreeNode(const SNI& node) const;
+    virtual bool equalsNode(const SNI& node) const;
 
     /**
      * Gets internal node as returned by parser
@@ -58,7 +61,7 @@ class SettingNode :  public SettingNodeInterface {
  	/**
  	 * Node type
  	 */ 
-    SettingNodeInterface::Type type_;
+    SNI::Type type_;
 
  	/**
  	 * Node's key
@@ -73,12 +76,12 @@ class SettingNode :  public SettingNodeInterface {
  	/**
  	 * Node's parent
  	 */ 
-    SettingNodeInterface* parentNode_;
+    SNI* parentNode_;
 
  	/**
  	 * Node's children
  	 */ 
-    std::vector<SettingNodeInterface*> childrenNodes_;
+    std::vector<SNI*> childrenNodes_;
 
  	/**
  	 * Node's internal node
@@ -86,7 +89,7 @@ class SettingNode :  public SettingNodeInterface {
     void* internalNode_;
 };
 
-}  // namespaces
+}}  // namespaces
 
-#endif  // INCLUDE_SETTINGSAPI_SETTINGNODE_H_
+#endif  // INCLUDE_SETTINGSAPI_NODES_SETTINGNODE_H_
 

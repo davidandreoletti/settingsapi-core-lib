@@ -12,20 +12,21 @@
 #include <string>
 
 namespace settingsapi {
-
-class SettingNodeInterface;
+namespace nodes { class SettingNodeInterface; }
 
 /**
  *  Public Settings API
  */
 class SettingsAPI {
  public:
+    typedef settingsapi::nodes::SettingNodeInterface SNI;
+
     /**
      * Reads a configuration file's content
      * \param configurationFileContent File's content
      * \return Root SettingNodeInterface representing root of the entire tree node
      */
-    settingsapi::SettingNodeInterface* readConfigurationFile(std::string configurationFileContent);  // NOLINT(whitespace/line_length)
+    SNI* readConfigurationFile(std::string configurationFileContent);
 
     /**
      * Writes configuration file
@@ -37,7 +38,7 @@ class SettingsAPI {
      * SettingNodeInterface* node = reinterpret_cast<SettingNodeInterface*> (new settingsapi::SettingNode());
      * \endcode
      */
-    std::string writeConfigurationFile(settingsapi::SettingNodeInterface* node);
+    std::string writeConfigurationFile(SNI* node);
 };
 
 }  // namespaces

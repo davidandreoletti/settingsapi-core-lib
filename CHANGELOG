@@ -1,5 +1,7 @@
 Release 1.4.0f0:
 
+PSETLCOR-24: Moved readers, writers and nodes into separate namespaces
+
 PSETLCOR-23: Replaced #include "./settingsapi with #include "settingsapi
 
 PSETLCOR-22: Removed SettingsAPI::createNode()

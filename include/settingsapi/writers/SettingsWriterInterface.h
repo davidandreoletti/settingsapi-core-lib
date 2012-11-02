@@ -6,20 +6,23 @@
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
-#ifndef INCLUDE_SETTINGSAPI_SETTINGSWRITERINTERFACE_H_
-#define INCLUDE_SETTINGSAPI_SETTINGSWRITERINTERFACE_H_
+#ifndef INCLUDE_SETTINGSAPI_WRITERS_SETTINGSWRITERINTERFACE_H_
+#define INCLUDE_SETTINGSAPI_WRITERS_SETTINGSWRITERINTERFACE_H_
 
-#include "settingsapi/SettingNodeInterface.h"
+#include "settingsapi/nodes/SettingNodeInterface.h"
 
 #include <string>  // NOLINT(build/include_order)
 
 namespace settingsapi {
+namespace writers {
 
 /**
  *  Settings API parser interface
  */
 class SettingsWriterInterface {
  public:
+    typedef settingsapi::nodes::SettingNodeInterface SNI;
+
     /**
      *  Destructor
      */
@@ -30,7 +33,7 @@ class SettingsWriterInterface {
      * \param node Root node of the tree node hierarchy
      * \return String representation
      */
-    virtual std::string write(SettingNodeInterface* node) = 0;
+    virtual std::string write(SNI* node) = 0;
 };
 
 /**
@@ -39,6 +42,6 @@ class SettingsWriterInterface {
  */
 inline SettingsWriterInterface::~SettingsWriterInterface() {}
 
-}  // namespaces
+}}  // namespaces
 
-#endif  // INCLUDE_SETTINGSAPI_SETTINGSWRITERINTERFACE_H_
+#endif  // INCLUDE_SETTINGSAPI_WRITERS_SETTINGSWRITERINTERFACE_H_

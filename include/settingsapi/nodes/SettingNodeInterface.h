@@ -6,13 +6,14 @@
 //  Copyright 2012 IO Stark. All rights reserved.
 //
 
-#ifndef INCLUDE_SETTINGSAPI_SETTINGNODEINTERFACE_H_
-#define INCLUDE_SETTINGSAPI_SETTINGNODEINTERFACE_H_
+#ifndef INCLUDE_SETTINGSAPI_NODES_SETTINGNODEINTERFACE_H_
+#define INCLUDE_SETTINGSAPI_NODES_SETTINGNODEINTERFACE_H_
 
 #include <string>
 #include <vector>
 
 namespace settingsapi {
+namespace nodes {
 
 /**
  *  Represents a node with a key, a value and some children, etc
@@ -146,6 +147,6 @@ class SettingNodeInterface {
 
 inline SettingNodeInterface::~SettingNodeInterface() {}
 
-}  // namespaces
+}}  // namespaces
 
-#endif  // INCLUDE_SETTINGSAPI_SETTINGNODEINTERFACE_H_
+#endif  // INCLUDE_SETTINGSAPI_NODES_SETTINGNODEINTERFACE_H_

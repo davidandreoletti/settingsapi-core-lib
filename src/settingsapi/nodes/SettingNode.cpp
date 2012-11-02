@@ -11,9 +11,12 @@
 #include <climits>
 #include <vector>
 #include <string>
-#include "settingsapi/SettingNode.h"
+#include "settingsapi/nodes/SettingNode.h"
 
 namespace settingsapi {
+namespace nodes {
+
+typedef settingsapi::nodes::SettingNodeInterface SNI;
 
 SettingNode::SettingNode() {
     this->type_ = SettingNodeInterface::TYPE_UNDEFINED;
@@ -26,11 +29,11 @@ SettingNode::SettingNode() {
 
 SettingNode::~SettingNode() {}
 
-SettingNodeInterface::Type SettingNode::getType() const {
+SNI::Type SettingNode::getType() const {
     return this->type_;
 }
 
-void SettingNode::setType(SettingNodeInterface::Type type) {
+void SettingNode::setType(SNI::Type type) {
     this->type_ = type;
 }
 
@@ -78,27 +81,27 @@ bool SettingNode::empty() {
     return this->childrenNodes_.empty();
 }
 
-SettingNodeInterface* SettingNode::getParentNode() {
+SNI* SettingNode::getParentNode() {
     return this->parentNode_;
 }
 
-void SettingNode::setParentNode(SettingNodeInterface* node) {
+void SettingNode::setParentNode(SNI* node) {
     this->parentNode_ = node;
 }
 
-void SettingNode::addChildNode(SettingNodeInterface* node) {
-    if (this->getType() == SettingNodeInterface::TYPE_OBJECT
-        || this->getType() == SettingNodeInterface::TYPE_ARRAY) {
+void SettingNode::addChildNode(SNI* node) {
+    if (this->getType() == SNI::TYPE_OBJECT
+        || this->getType() == SNI::TYPE_ARRAY) {
         this->childrenNodes_.push_back(node);
         node->setParentNode(this);
     }
 }
 
-std::vector<SettingNodeInterface*> SettingNode::getChildren() const {
+std::vector<SNI*> SettingNode::getChildren() const {
     return this->childrenNodes_;
 }
 
-bool SettingNode::equalsTreeNode(const SettingNodeInterface& node) const {
+bool SettingNode::equalsTreeNode(const SNI& node) const {
     if (this == &node) {return true;}
 
     // Check nodes themselves are equal
@@ -111,8 +114,8 @@ bool SettingNode::equalsTreeNode(const SettingNodeInterface& node) const {
     if (aSize == 0) {return true;}
 
     // Check each child in both nodes are equals
-    std::vector<SettingNodeInterface*>::const_iterator ita = this->childrenNodes_.begin();  // NOLINT(whitespace/line_length)
-    std::vector<SettingNodeInterface*>::const_iterator itb = node.getChildren().begin();  // NOLINT(whitespace/line_length)
+    std::vector<SNI*>::const_iterator ita = this->childrenNodes_.begin();
+    std::vector<SNI*>::const_iterator itb = node.getChildren().begin();
 
     bool isTreeNodeEqual = false;
     while (ita != this->childrenNodes_.end()
@@ -124,7 +127,7 @@ bool SettingNode::equalsTreeNode(const SettingNodeInterface& node) const {
     return isTreeNodeEqual;
 }
 
-bool SettingNode::equalsNode(const SettingNodeInterface& node) const {
+bool SettingNode::equalsNode(const SNI& node) const {
     if (&node == NULL) {return false;}
     if (this == &node) {return true;}
     if ((this->getKey().compare(node.getKey()) != 0)
@@ -144,4 +147,4 @@ void SettingNode::setInternalNode(void* node) {
     this->internalNode_ = node;
 }
 
-}  // namespaces
+}}  // namespaces
