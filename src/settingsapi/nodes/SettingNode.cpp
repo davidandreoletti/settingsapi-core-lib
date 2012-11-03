@@ -24,7 +24,6 @@ SettingNode::SettingNode() {
     this->value_= "";
     this->childrenNodes_ = std::vector<SettingNodeInterface*>();
     this->parentNode_ = NULL;
-    this->internalNode_ = NULL;
 }
 
 SettingNode::~SettingNode() {}
@@ -136,15 +135,6 @@ bool SettingNode::equalsNode(const SNI& node) const {
         return false;
     }
     return true;
-}
-
-
-void* SettingNode::getInternalNode() {
-    return this->internalNode_;
-}
-
-void SettingNode::setInternalNode(void* node) {
-    this->internalNode_ = node;
 }
 
 }}  // namespaces

@@ -45,18 +45,6 @@ class SettingNode :  public settingsapi::nodes::SettingNodeInterface {
     virtual bool equalsTreeNode(const SNI& node) const;
     virtual bool equalsNode(const SNI& node) const;
 
-    /**
-     * Gets internal node as returned by parser
-     * \return Internal node
-     */
-    virtual void* getInternalNode();
-
-    /**
-     * Sets the internal node returned by parser to this node
-     * \param node Library specific node representation
-     */
-    virtual void setInternalNode(void* node);
-
  private:
  	/**
  	 * Node type
@@ -82,11 +70,6 @@ class SettingNode :  public settingsapi::nodes::SettingNodeInterface {
  	 * Node's children
  	 */ 
     std::vector<SNI*> childrenNodes_;
-
- 	/**
- 	 * Node's internal node
- 	 */
-    void* internalNode_;
 };
 
 }}  // namespaces

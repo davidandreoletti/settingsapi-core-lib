@@ -46,7 +46,6 @@ SN* parseRecusively(JSONNODE* parentLjn) {
 
     SN* parentNode = new SN();
     parentNode->setType(identifyNodeType(parentLjn));
-    parentNode->setInternalNode(static_cast<void*>(parentLjn));
     parentNode->setKey(json_name(parentLjn));
 
     char* valueAsCString = json_as_string(parentLjn);
