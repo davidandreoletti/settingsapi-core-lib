@@ -26,7 +26,19 @@ SettingNode::SettingNode() {
     this->parentNode_ = NULL;
 }
 
-SettingNode::~SettingNode() {}
+void deletePointedToSettingNodeInterfaceObject(SNI* p) {
+    delete p;
+    p = NULL;
+}
+
+SettingNode::~SettingNode() {
+    // Delete pointed-to childrenNodes_ object
+    // vector will be destroy when it goes out of scope
+    std::for_each(this->childrenNodes_.begin(),
+                  this->childrenNodes_.end(),
+                  deletePointedToSettingNodeInterfaceObject);
+    // parentNode_ will delete itsef after deleting its children
+}
 
 SNI::Type SettingNode::getType() const {
     return this->type_;

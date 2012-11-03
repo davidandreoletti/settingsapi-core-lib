@@ -1,5 +1,7 @@
 Release 1.4.0f0:
 
+PSETLCOR-26: Fixed memory leak in SettingNode::~SettingNode()
+
 PSETLCOR-25: Removed SettingNode::getInternalNode() and SettingNode::setInternalNode(...)
 
 PSETLCOR-24: Moved readers, writers and nodes into separate namespaces
