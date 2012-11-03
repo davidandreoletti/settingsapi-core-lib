@@ -24,13 +24,13 @@ class SettingsAPI {
     /**
      * Reads a configuration file's content
      * \param configurationFileContent File's content
-     * \return Root SettingNodeInterface representing root of the entire tree node
+     * \return Root SettingNodeInterface representing root of the entire tree node. Caller owns the pointer.
      */
     SNI* readConfigurationFile(std::string configurationFileContent);
 
     /**
      * Writes configuration file
-     * \param node Root node of the full tree node hierarchy
+     * \param node Root node of the full tree node hierarchy. Caller owns the pointer.
      * \return String representation of the full node tree hierarchy
      *
      * A note can be created with:

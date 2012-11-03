@@ -1,5 +1,7 @@
 Release 1.4.0f0:
 
+PSETLCOR-28: Improved SettingsAPI documentation
+
 PSETLCOR-27: Fixed memory leak in SettingsAPI::writeConfigurationFile(...)
 
 PSETLCOR-26: Fixed memory leak in SettingNode::~SettingNode()
