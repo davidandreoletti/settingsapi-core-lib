@@ -1,5 +1,7 @@
 Release 1.4.0f0:
 
+PSETLCOR-27: Fixed memory leak in SettingsAPI::writeConfigurationFile(...)
+
 PSETLCOR-26: Fixed memory leak in SettingNode::~SettingNode()
 
 PSETLCOR-25: Removed SettingNode::getInternalNode() and SettingNode::setInternalNode(...)

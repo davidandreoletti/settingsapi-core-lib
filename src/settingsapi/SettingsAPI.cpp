@@ -47,7 +47,9 @@ std::string SettingsAPI::writeConfigurationFile(SNI* node) {
 #if defined(USE_LIBRARY_LIBJSON)
     SWI* swi = NULL;
     swi = reinterpret_cast<SWI*>(new SW());
-    return swi->write(node);
+    std::string s = swi->write(node);
+    delete swi;
+    return s;
 #else
 #   error No underlying library specified. Read documentation for further info.
 #endif
