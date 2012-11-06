@@ -40,7 +40,7 @@
 		C70CEDC515E7BF5100017A65 /* libsettingsapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
 		C70CEDCB15E7BF5100017A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70CEDC915E7BF5100017A65 /* InfoPlist.strings */; };
 		C74628351606A37900717E19 /* libboost_unit_test_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74628341606A37900717E19 /* libboost_unit_test_framework.a */; };
-		C7BB03A5160DECA8000AD3AA /* libsettingsapi.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
+		C7BB03A5160DECA8000AD3AA /* libsettingsapi.a in Copy library to prefix */ = {isa = PBXBuildFile; fileRef = C70CEDAC15E7BF5100017A65 /* libsettingsapi.a */; };
 		C7F419551642BF6C00431FDD /* SettingNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F419491642BF6C00431FDD /* SettingNode.cpp */; };
 		C7F419561642BF6C00431FDD /* SettingsReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F4194E1642BF6C00431FDD /* SettingsReader.cpp */; };
 		C7F419571642BF6C00431FDD /* SettingsAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F4194F1642BF6C00431FDD /* SettingsAPI.cpp */; };
@@ -69,14 +69,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C70CEDAA15E7BF5100017A65 /* CopyFiles */ = {
+		C70CEDAA15E7BF5100017A65 /* Copy library to prefix */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "${PROJECT_DIR}/../../../prefix";
 			dstSubfolderSpec = 0;
 			files = (
-				C7BB03A5160DECA8000AD3AA /* libsettingsapi.a in CopyFiles */,
+				C7BB03A5160DECA8000AD3AA /* libsettingsapi.a in Copy library to prefix */,
 			);
+			name = "Copy library to prefix";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -466,7 +467,8 @@
 			buildPhases = (
 				C70CEDA815E7BF5100017A65 /* Sources */,
 				C70CEDA915E7BF5100017A65 /* Frameworks */,
-				C70CEDAA15E7BF5100017A65 /* CopyFiles */,
+				C70CEDAA15E7BF5100017A65 /* Copy library to prefix */,
+				C7DB67EE164800E100763350 /* Copy headers to prefix */,
 			);
 			buildRules = (
 			);
@@ -577,6 +579,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		C7DB67EE164800E100763350 /* Copy headers to prefix */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy headers to prefix";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PREFIX_INCLUDE=\"${PROJECT_DIR}/../../../prefix/include/settingsapi\"\nPREFIX_INCLUDE_NODES=\"${PREFIX_INCLUDE}/nodes\"\nrm -rf \"${PREFIX_INCLUDE}\"\nmkdir -pv \"${PREFIX_INCLUDE_NODES}\"\ncp -v \"${PROJECT_DIR}/../../../include/settingsapi/nodes/SettingNode.h\" \"${PREFIX_INCLUDE_NODES}\"\ncp -v \"${PROJECT_DIR}/../../../include/settingsapi/nodes/SettingNodeInterface.h\" \"${PREFIX_INCLUDE_NODES}\"\ncp -v \"${PROJECT_DIR}/../../../include/settingsapi/SettingsAPI.h\" \"${PROJECT_DIR}/../../../prefix/include/settingsapi\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
