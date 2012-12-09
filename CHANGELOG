@@ -1,3 +1,7 @@
+Release 1.4.1f0:
+
+PSETLCOR-30: Fixed dependencies compilation with Xcode 4.5+ and latest iOS (6.0)
+
 Release 1.4.0f0:
 
 PSETLCOR-29: Copied public headers to prefix/include
