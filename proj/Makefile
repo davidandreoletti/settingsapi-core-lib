@@ -43,6 +43,7 @@ clean-ios :
 	rm -rf $(PREFIX_DIR)
 
 # Build for iOS
-build-ios : clean-ios dependencies-ios build-dependencies-ios
+#build-ios : clean-ios dependencies-ios build-dependencies-ios
+build-ios :
 	xcrun --verbose xcodebuild -verbose -project ./proj.ios/settingsapi-core-lib/settingsapi-core-lib.xcodeproj -target settingsapi -configuration Release -sdk iphoneos -arch "armv6 armv7" clean install || false
 	([ "$(INTERNAL_PREFIX_DIR)" != "$(PREFIX)" ] && cp -v $(INTERNAL_PREFIX_DIR)/* $(PREFIX)/ ) || [ "$(INTERNAL_PREFIX_DIR)" == "$(PREFIX)" ]

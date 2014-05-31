@@ -1,0 +1,111 @@
+CMAKE_MINIMUM_REQUIRED (VERSION 2.8.9) 
+
+# This file requires
+# - TARGETED_PLATFORM. Valid values are: IOS
+# - BUILD_DIR. Valid values: any existing directory
+#
+
+# Check requires input parameters are passed
+IF ((NOT (DEFINED TARGETED_PLATFORM)) OR "${TARGETED_PLATFORM}" STREQUAL "")
+    MESSAGE(FATAL_ERROR "TARGETED_PLATFORM NOT defined!")
+ENDIF()
+IF ((NOT (DEFINED BUILD_DIR)) OR "${BUILD_DIR}" STREQUAL "")
+    MESSAGE(FATAL_ERROR "BUILD_DIR NOT defined!")
+ENDIF()
+
+
+# Target plaform is iOS
+SET (TARGETED_PLATFORM_IOS "IOS")
+
+# CMake Build configuration
+SET (BUILD_CONFIGURATIONS "Debug MinSizeRel RelWithDebugInfo Release")
+
+###############################################################################
+# Project Basic Info
+###############################################################################
+PROJECT (settingsapi-core-lib)
+SET (LIBNAME settingsapi)
+SET (PROJECT_VERSION_MAJOR "0")
+SET (PROJECT_VERSION_MINOR "1")
+SET (PROJECT_VERSION_PATCH "0")
+SET (PROJECT_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
+
+ADD_SUBDIRECTORY (./../include ${BUILD_DIR}/include)
+ADD_SUBDIRECTORY (./../libs ${BUILD_DIR}/libs)
+ADD_SUBDIRECTORY (./../src ${BUILD_DIR}/src)
+ADD_SUBDIRECTORY (./../test ${BUILD_DIR}/test)
+
+###############################################################################
+# Library
+###############################################################################
+
+IF ("${TARGETED_PLATFORM}" STREQUAL "${TARGETED_PLATFORM_IOS}")
+    SET (SPECIFIC_PLATFORM_SOURCES ${IOS_PLATFORM_SOURCES})
+    SET (SPECIFIC_PLATFORM_HEADERS_DIR ${IOS_PLATFORM_HEADERS_DIR})
+    #SET (DEPENDENCY_LIBRARIES ${TARGET_LIBJSON_LIBRARY})
+ENDIF()
+
+# Headers
+INCLUDE_DIRECTORIES (
+    ${CROSS_PLATFORM_HEADERS_DIR}
+    ${SPECIFIC_PLATFORM_HEADERS_DIR}
+    ${CROSS_PLATFORM_LIBS_HEADERS_DIR}
+)
+
+# Target
+ADD_LIBRARY (
+    ${LIBNAME} 
+    STATIC 
+    ${CROSS_PLATFORM_SOURCES}
+    ${SPECIFIC_PLATFORM_SOURCES}
+)
+
+IF ("${TARGETED_PLATFORM}" STREQUAL "${TARGETED_PLATFORM_IOS}")
+    SET_XCODE_STATICLIBRARY_DEFAULT_PROPERTIES(${LIBNAME} "Debug")
+    SET_XCODE_STATICLIBRARY_DEFAULT_PROPERTIES(${LIBNAME} "MinSizeRel")
+    SET_XCODE_STATICLIBRARY_DEFAULT_PROPERTIES(${LIBNAME} "RelWithDebugInfo")
+    SET_XCODE_STATICLIBRARY_DEFAULT_PROPERTIES(${LIBNAME} "Release")
+endif()
+
+# Dependencies
+TARGET_LINK_LIBRARIES (
+    ${LIBNAME}
+    ${DEPENDENCY_LIBRARIES}
+)
+
+###############################################################################
+# Library's Unit Test
+###############################################################################
+SET (LIBNAME_TEST ${LIBNAME}Tests)
+
+# Headers
+INCLUDE_DIRECTORIES (
+    ${CROSS_PLATFORM_TEST_HEADERS_DIR}
+    ${CROSS_PLATFORM_TEST_LIBS_HEADERS_DIR}
+)
+
+# Executable
+ADD_EXECUTABLE (
+        ${LIBNAME_TEST}
+        ${CROSS_PLATFORM_TEST_SOURCES}
+        ${IOS_PLATFORM_TEST_SOURCES}
+    )
+
+# Dependencies
+TARGET_LINK_LIBRARIES (
+    ${LIBNAME_TEST}
+    ${LIBNAME}
+    ${DEPENDENCY_TEST_LIBRARIES}
+)
+
+ENABLE_TESTING ()
+ADD_TEST (
+    NAME UnitTest
+    COMMAND ${LIBNAME_TEST}
+)
+
+get_cmake_property(_variableNames VARIABLES)
+foreach (_variableName ${_variableNames})
+    #message(STATUS "${_variableName}=${${_variableName}}")
+endforeach()
+

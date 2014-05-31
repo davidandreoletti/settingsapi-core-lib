@@ -42,7 +42,7 @@ SNI::Type identifyNodeType(JSONNODE* n) {
  * \return SettingNode equivalent to parentLjn including children
  */
 SN* parseRecusively(JSONNODE* parentLjn) {
-    if (parentLjn == NULL || parentLjn == JSON_NULL) { return NULL;}
+    if (parentLjn == NULL) { return NULL;}
 
     SN* parentNode = new SN();
     parentNode->setType(identifyNodeType(parentLjn));
@@ -55,7 +55,7 @@ SN* parseRecusively(JSONNODE* parentLjn) {
     JSONNODE_ITERATOR it = json_begin(parentLjn);
     while (it != json_end(parentLjn)) {
         JSONNODE* child = *it;
-        if (child == NULL || child == JSON_NULL) {
+        if (child == NULL) {
             return NULL;
         } else {
             SN* cn = parseRecusively(child);
